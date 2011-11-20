@@ -1,0 +1,59 @@
+<?xml version="1.0" standalone="no" ?>
+<enumgen version = "4">
+
+    <namespace name = "BFG">
+
+      <enum name = "AudioAction" export = "AUDIO_BLASTER_API">
+
+          <!-- For Audio_API definition -->
+          <include>AudioBlaster/Defines.h</include>
+
+          <!-- Audio Events Master -->
+          <value set =" 5000">AE_POSITION_PLAYER</value>
+          <value>AE_ORIENTATION_PLAYER</value>
+          <value>AE_VELOCITY_PLAYER</value>
+          <value>AE_MASTER_GAIN</value>
+          <value>AE_CREATE_AUDIO_OBJECT</value>
+          <value>AE_SET_LEVEL_CURRENT</value>
+
+          <!-- Audio Events for AudioObject-->   
+          <value>AE_PLAY</value>
+          <value>AE_STOP</value>
+          <value>AE_PAUSE</value>
+          <value>AE_REWIND</value>
+          <value>AE_PITCH</value>
+          <value>AE_GAIN</value>
+          <value>AE_ROLLOFF_FACTOR</value>
+          <value>AE_REFERENCE_DISTANCE</value>
+          <value>AE_CONE_OUTER_GAIN</value>
+          <value>AE_CONE_INNER_ANGLE</value>
+          <value>AE_CONE_OUTER_ANGLE</value>
+          <value>AE_POSITION</value>
+          <value>AE_ORIENTATION</value>
+          <value>AE_VELOCITY</value>
+      </enum>
+
+      <enum name = "AudioObjectType" export = "AUDIO_BLASTER_API">
+
+        <!-- For Audio_API definition -->
+        <include>AudioBlaster/Defines.h</include>
+
+        <!-- Audio Object Types-->
+        <value>AOT_SINGLE_SERVING</value>
+        <value>AOT_PERMANENT</value>
+      </enum>
+
+      <enum name = "AudioPreset" export = "AUDIO_BLASTER_API">
+        <!-- For Audio_API definition -->
+        <include>AudioBlaster/Defines.h</include>
+
+        <!-- Audio Object Presets-->
+        <value>AOP_DEFAULT_MUSIC</value>
+        <value>AOP_DEFAULT_SOUND</value>
+        <value>AOP_DEFAULT_3DSOUND</value>
+
+      </enum>
+
+    </namespace>
+</enumgen>
+

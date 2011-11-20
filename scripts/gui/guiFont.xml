@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<MyGUI type="Resource" version="1.1">
+
+  <Resource type="ResourceTrueTypeFont" name="base_font">
+    <Property key="Source" value="arial.ttf"/>
+    <Property key="Size" value="75"/>
+    <Property key="Resolution" value="50"/>
+    <Property key="Antialias" value="false"/>
+    <Property key="SpaceWidth" value="6"/>
+    <Property key="TabWidth" value="12"/>
+    <Property key="CursorWidth" value="4"/>
+    <Property key="Distance" value="12"/>
+    <Property key="OffsetHeight" value="-5"/>
+    <Codes>
+      <Code range="33 126"/>
+    </Codes>
+  </Resource>
+
+  <Resource type="ResourceManualFont" name="font_MM_normal.146">
+    <Property key="Source" value="font01.png"/>
+    <Property key="DefaultHeight" value="146"/>
+    <Codes>
+
+      <!--space-->
+      <Code index="32" coord="136 743 96 146"/>
+
+      <!--symbol-->
+      <Code index="33" coord="25 22 55 146"/>
+      <Code index="34" coord="91 22 85 146"/>
+      <Code index="35" coord="182 22 100 146"/>
+      <Code index="36" coord="292 22 100 146"/>
+      <Code index="37" coord="404 22 137 146"/>
+      <Code index="38" coord="557 22 120 146"/>
+      <Code index="39" coord="688 22 55 146"/>
+      <Code index="40" coord="755 22 62 146"/>
+      <Code index="41" coord="831 22 62 146"/>
+      <Code index="42" coord="913 22 72 146"/>
+      <Code index="43" coord="1005 22 94 146"/>
+      <Code index="44" coord="1114 22 55 146"/>
+      <Code index="45" coord="1180 22 63 146"/>
+      <Code index="46" coord="1254 22 55 146"/>
+      <Code index="47" coord="1318 22 60 146"/>
+
+      <!--0-9-->
+      <Code index="48" coord="1385 22 100 146"/>
+      <Code index="49" coord="1500 22 78 146"/>
+      <Code index="50" coord="1604 22 100 146"/>
+      <Code index="51" coord="1716 22 98 146"/>
+      <Code index="52" coord="1823 22 104 146"/>
+      <Code index="53" coord="23 167 100 146"/>
+      <Code index="54" coord="133 167 100 146"/>
+      <Code index="55" coord="243 167 100 146"/>
+      <Code index="56" coord="354 167 100 146"/>
+      <Code index="57" coord="463 167 100 146"/>
+
+      <!--Symbols-->
+      <Code index="58" coord="576 167 55 146"/>
+      <Code index="59" coord="646 167 55 146"/>
+      <Code index="60" coord="715 167 96 146"/>
+      <Code index="61" coord="825 167 94 146"/>
+      <Code index="62" coord="933 167 96 146"/>
+      <Code index="63" coord="1041 167 93 146"/>
+      <Code index="64" coord="1139 167 118 146"/>
+
+      <Code index="91" coord="540 455 65 146"/>
+      <Code index="92" coord="609 455 60 146"/>
+      <Code index="93" coord="675 455 65 146"/>
+      <Code index="94" coord="757 455 90 146"/>
+      <Code index="95" coord="858 455 89 146"/>
+      <Code index="96" coord="951 455 54 146"/>
+
+      <Code index="123" coord="1730 599 72 146"/>
+      <Code index="124" coord="1814 599 44 146"/>
+      <Code index="125" coord="1870 599 72 146"/>
+      <Code index="126" coord="24 743 96 146"/>
+
+      <!--A-Z-->
+      <Code index="65" coord="1260 167 120 146"/>
+      <Code index="66" coord="1391 167 108 146"/>
+      <Code index="67" coord="1511 167 111 146"/>
+      <Code index="68" coord="1637 167 108 146"/>
+      <Code index="69" coord="1761 167 101 146"/>
+      <Code index="70" coord="1877 167 95 146"/>
+      <Code index="71" coord="24 311 116 146"/>
+      <Code index="72" coord="157 311 111 146"/>
+      <Code index="73" coord="288 311 55 146"/>
+      <Code index="74" coord="358 311 97 146"/>
+      <Code index="75" coord="474 311 118 146"/>
+      <Code index="76" coord="604 311 97 146"/>
+      <Code index="77" coord="714 311 125 146"/>
+      <Code index="78" coord="857 311 111 146"/>
+      <Code index="79" coord="984 311 117 146"/>
+      <Code index="80" coord="1117 311 101 146"/>
+      <Code index="81" coord="1231 311 119 146"/>
+      <Code index="82" coord="1364 311 112 146"/>
+      <Code index="83" coord="1483 311 106 146"/>
+      <Code index="84" coord="1598 311 109 146"/>
+      <Code index="85" coord="1721 311 111 146"/>
+      <Code index="86" coord="1843 311 119 146"/>
+      <Code index="87" coord="19 455 147 146"/>
+      <Code index="88" coord="170 455 118 146"/>
+      <Code index="89" coord="294 455 119 146"/>
+      <Code index="90" coord="417 455 111 146"/>
+
+      <!--a-z-->
+      <Code index="97" coord="1023 455 98 146"/>
+      <Code index="98" coord="1136 455 98 146"/>
+      <Code index="99" coord="1244 455 99 146"/>
+      <Code index="100" coord="1353 455 98 146"/>
+      <Code index="101" coord="1463 455 101 146"/>
+      <Code index="102" coord="1570 455 77 146"/>
+      <Code index="103" coord="1650 455 98 146"/>
+      <Code index="104" coord="1763 455 95 146"/>
+      <Code index="105" coord="1874 455 53 146"/>
+      <Code index="106" coord="1931 455 66 146"/>
+      <Code index="107" coord="25 599 100 146"/>
+      <Code index="108" coord="136 599 53 146"/>
+      <Code index="109" coord="205 599 135 146"/>
+      <Code index="110" coord="355 599 95 146"/>
+      <Code index="111" coord="463 599 99 146"/>
+      <Code index="112" coord="575 599 98 146"/>
+      <Code index="113" coord="683 599 98 146"/>
+      <Code index="114" coord="796 599 77 146"/>
+      <Code index="115" coord="879 599 94 146"/>
+      <Code index="116" coord="981 599 75 146"/>
+      <Code index="117" coord="1068 599 95 146"/>
+      <Code index="118" coord="1173 599 99 146"/>
+      <Code index="119" coord="1277 599 139 146"/>
+      <Code index="120" coord="1421 599 103 146"/>
+      <Code index="121" coord="1530 599 99 146"/>
+      <Code index="122" coord="1633 599 91 146"/>
+
+    </Codes>
+  </Resource>
+
+  <Resource type="ResourceManualFont" name="font_MM_highlight.146">
+    <Property key="Source" value="font02.png"/>
+    <Property key="DefaultHeight" value="146"/>
+    <Codes>
+
+      <!--space-->
+      <Code index="32" coord="136 743 96 146"/>
+
+      <!--symbol-->
+      <Code index="33" coord="25 22 55 146"/>
+      <Code index="34" coord="91 22 85 146"/>
+      <Code index="35" coord="182 22 100 146"/>
+      <Code index="36" coord="292 22 100 146"/>
+      <Code index="37" coord="404 22 137 146"/>
+      <Code index="38" coord="557 22 120 146"/>
+      <Code index="39" coord="688 22 55 146"/>
+      <Code index="40" coord="755 22 62 146"/>
+      <Code index="41" coord="831 22 62 146"/>
+      <Code index="42" coord="913 22 72 146"/>
+      <Code index="43" coord="1005 22 94 146"/>
+      <Code index="44" coord="1114 22 55 146"/>
+      <Code index="45" coord="1180 22 63 146"/>
+      <Code index="46" coord="1254 22 55 146"/>
+      <Code index="47" coord="1318 22 60 146"/>
+
+      <!--0-9-->
+      <Code index="48" coord="1385 22 100 146"/>
+      <Code index="49" coord="1500 22 78 146"/>
+      <Code index="50" coord="1604 22 100 146"/>
+      <Code index="51" coord="1716 22 98 146"/>
+      <Code index="52" coord="1823 22 104 146"/>
+      <Code index="53" coord="23 167 100 146"/>
+      <Code index="54" coord="133 167 100 146"/>
+      <Code index="55" coord="243 167 100 146"/>
+      <Code index="56" coord="354 167 100 146"/>
+      <Code index="57" coord="463 167 100 146"/>
+
+      <!--Symbols-->
+      <Code index="58" coord="576 167 55 146"/>
+      <Code index="59" coord="646 167 55 146"/>
+      <Code index="60" coord="715 167 96 146"/>
+      <Code index="61" coord="825 167 94 146"/>
+      <Code index="62" coord="933 167 96 146"/>
+      <Code index="63" coord="1041 167 93 146"/>
+      <Code index="64" coord="1139 167 118 146"/>
+
+      <Code index="91" coord="540 455 65 146"/>
+      <Code index="92" coord="609 455 60 146"/>
+      <Code index="93" coord="675 455 65 146"/>
+      <Code index="94" coord="757 455 90 146"/>
+      <Code index="95" coord="858 455 89 146"/>
+      <Code index="96" coord="951 455 54 146"/>
+
+      <Code index="123" coord="1730 599 72 146"/>
+      <Code index="124" coord="1814 599 44 146"/>
+      <Code index="125" coord="1870 599 72 146"/>
+      <Code index="126" coord="24 743 96 146"/>
+
+      <!--A-Z-->
+      <Code index="65" coord="1260 167 120 146"/>
+      <Code index="66" coord="1391 167 108 146"/>
+      <Code index="67" coord="1511 167 111 146"/>
+      <Code index="68" coord="1637 167 108 146"/>
+      <Code index="69" coord="1761 167 101 146"/>
+      <Code index="70" coord="1877 167 95 146"/>
+      <Code index="71" coord="24 311 116 146"/>
+      <Code index="72" coord="157 311 111 146"/>
+      <Code index="73" coord="288 311 55 146"/>
+      <Code index="74" coord="358 311 97 146"/>
+      <Code index="75" coord="474 311 118 146"/>
+      <Code index="76" coord="604 311 97 146"/>
+      <Code index="77" coord="714 311 125 146"/>
+      <Code index="78" coord="857 311 111 146"/>
+      <Code index="79" coord="984 311 117 146"/>
+      <Code index="80" coord="1117 311 101 146"/>
+      <Code index="81" coord="1231 311 119 146"/>
+      <Code index="82" coord="1364 311 112 146"/>
+      <Code index="83" coord="1483 311 106 146"/>
+      <Code index="84" coord="1598 311 109 146"/>
+      <Code index="85" coord="1721 311 111 146"/>
+      <Code index="86" coord="1843 311 119 146"/>
+      <Code index="87" coord="19 455 147 146"/>
+      <Code index="88" coord="170 455 118 146"/>
+      <Code index="89" coord="294 455 119 146"/>
+      <Code index="90" coord="417 455 111 146"/>
+
+      <!--a-z-->
+      <Code index="97" coord="1023 455 98 146"/>
+      <Code index="98" coord="1136 455 98 146"/>
+      <Code index="99" coord="1244 455 99 146"/>
+      <Code index="100" coord="1353 455 98 146"/>
+      <Code index="101" coord="1463 455 101 146"/>
+      <Code index="102" coord="1570 455 77 146"/>
+      <Code index="103" coord="1650 455 98 146"/>
+      <Code index="104" coord="1763 455 95 146"/>
+      <Code index="105" coord="1874 455 53 146"/>
+      <Code index="106" coord="1931 455 66 146"/>
+      <Code index="107" coord="25 599 100 146"/>
+      <Code index="108" coord="136 599 53 146"/>
+      <Code index="109" coord="205 599 135 146"/>
+      <Code index="110" coord="355 599 95 146"/>
+      <Code index="111" coord="463 599 99 146"/>
+      <Code index="112" coord="575 599 98 146"/>
+      <Code index="113" coord="683 599 98 146"/>
+      <Code index="114" coord="796 599 77 146"/>
+      <Code index="115" coord="879 599 94 146"/>
+      <Code index="116" coord="981 599 75 146"/>
+      <Code index="117" coord="1068 599 95 146"/>
+      <Code index="118" coord="1173 599 99 146"/>
+      <Code index="119" coord="1277 599 139 146"/>
+      <Code index="120" coord="1421 599 103 146"/>
+      <Code index="121" coord="1530 599 99 146"/>
+      <Code index="122" coord="1633 599 91 146"/>
+
+    </Codes>
+  </Resource>
+
+
+</MyGUI>

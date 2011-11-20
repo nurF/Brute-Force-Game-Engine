@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<MyGUI type="Resource" version="1.1">
+
+  <Resource type="ResourceSkin" name = "BFEButton" size = "30 30" texture = "#{BFE_Menu_Texture}">
+    <Property key="FontName" value = "Default" />
+    <Property key="TextAlign" value = "HCenter VCenter" />
+
+    <BasisSkin type="SubSkin" offset = "0 0 6 30" align = "Left VStretch">
+      <State name="disabled" offset = "1 1 6 30"/>
+      <State name="normal" offset = "1 33 6 30"/>
+      <State name="highlighted" offset = "1 65 6 30"/>
+      <State name="normal_checked" offset = "1 97 6 30"/>
+      <State name="pushed" offset = "1 129 6 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "6 0 18 30" align = "HStretch VStretch">
+      <State name="disabled" offset = "7 1 18 30"/>
+      <State name="normal" offset = "7 33 18 30"/>
+      <State name="highlighted" offset = "7 65 18 30"/>
+      <State name="normal_checked" offset = "7 97 18 30"/>
+      <State name="pushed" offset = "7 129 18 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "24 0 6 30" align = "Right VStretch">
+      <State name="disabled" offset = "25 1 6 30"/>
+      <State name="normal" offset = "25 33 6 30"/>
+      <State name="highlighted" offset = "25 65 6 30"/>
+      <State name="normal_checked" offset = "25 97 6 30"/>
+      <State name="pushed" offset = "25 129 6 30"/>
+    </BasisSkin>
+
+    <BasisSkin type="SimpleText" offset = "1 1 26 26" align = "Stretch">
+      <State name="disabled" colour="#{BFE_Button_ColourNormal}" shift = "false"/>
+      <State name="normal" colour="#{BFE_Button_ColourNormal}" shift = "false"/>
+      <State name="highlighted" colour="#{BFE_Button_ColourNormal}" shift = "false"/>
+      <State name="normal_checked" colour="#{BFE_Button_ColourPushed}" shift = "true"/>
+      <State name="pushed" colour="#{BFE_Button_ColourPushed}" shift = "true"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name = "BFEPlayButton" size = "30 30" texture = "#{BFE_Menu_Texture}">
+    <BasisSkin type="SubSkin" offset = "0 0 6 30" align = "Left VStretch">
+      <State name="disabled" offset = "1 1 6 30"/>
+      <State name="normal" offset = "1 33 6 30"/>
+      <State name="highlighted" offset = "1 65 6 30"/>
+      <State name="normal_checked" offset = "1 97 6 30"/>
+      <State name="pushed" offset = "1 129 6 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "6 0 18 30" align = "HStretch VStretch">
+      <State name="disabled" offset = "7 1 18 30"/>
+      <State name="normal" offset = "7 33 18 30"/>
+      <State name="highlighted" offset = "7 65 18 30"/>
+      <State name="normal_checked" offset = "7 97 18 30"/>
+      <State name="pushed" offset = "7 129 18 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "24 0 6 30" align = "Right VStretch">
+      <State name="disabled" offset = "25 1 6 30"/>
+      <State name="normal" offset = "25 33 6 30"/>
+      <State name="highlighted" offset = "25 65 6 30"/>
+      <State name="normal_checked" offset = "25 97 6 30"/>
+      <State name="pushed" offset = "25 129 6 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "4 4 22 22" align = "HStretch VStretch">
+      <State name="disabled" offset = "34 2 22 22"/>
+      <State name="normal" offset = "34 2 22 22"/>
+      <State name="highlighted" offset = "34 2 22 22"/>
+      <State name="normal_checked" offset = "34 2 22 22"/>
+      <State name="pushed" offset = "34 2 22 22"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name = "BFEPauseButton" size = "30 30" texture = "#{BFE_Menu_Texture}">
+    <BasisSkin type="SubSkin" offset = "0 0 6 30" align = "Left VStretch">
+      <State name="disabled" offset = "1 1 6 30"/>
+      <State name="normal" offset = "1 33 6 30"/>
+      <State name="highlighted" offset = "1 65 6 30"/>
+      <State name="normal_checked" offset = "1 97 6 30"/>
+      <State name="pushed" offset = "1 129 6 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "6 0 18 30" align = "HStretch VStretch">
+      <State name="disabled" offset = "7 1 18 30"/>
+      <State name="normal" offset = "7 33 18 30"/>
+      <State name="highlighted" offset = "7 65 18 30"/>
+      <State name="normal_checked" offset = "7 97 18 30"/>
+      <State name="pushed" offset = "7 129 18 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "24 0 6 30" align = "Right VStretch">
+      <State name="disabled" offset = "25 1 6 30"/>
+      <State name="normal" offset = "25 33 6 30"/>
+      <State name="highlighted" offset = "25 65 6 30"/>
+      <State name="normal_checked" offset = "25 97 6 30"/>
+      <State name="pushed" offset = "25 129 6 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "4 4 22 22" align = "HStretch VStretch">
+      <State name="disabled" offset = "34 54 22 22"/>
+      <State name="normal" offset = "34 54 22 22"/>
+      <State name="highlighted" offset = "34 54 22 22"/>
+      <State name="normal_checked" offset = "34 54 22 22"/>
+      <State name="pushed" offset = "34 54 22 22"/>
+    </BasisSkin>
+  </Resource>
+  
+  <Resource type="ResourceSkin" name = "BFEStopButton" size = "30 30" texture = "#{BFE_Menu_Texture}">
+    <BasisSkin type="SubSkin" offset = "0 0 6 30" align = "Left VStretch">
+      <State name="disabled" offset = "1 1 6 30"/>
+      <State name="normal" offset = "1 33 6 30"/>
+      <State name="highlighted" offset = "1 65 6 30"/>
+      <State name="normal_checked" offset = "1 97 6 30"/>
+      <State name="pushed" offset = "1 129 6 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "6 0 18 30" align = "HStretch VStretch">
+      <State name="disabled" offset = "7 1 18 30"/>
+      <State name="normal" offset = "7 33 18 30"/>
+      <State name="highlighted" offset = "7 65 18 30"/>
+      <State name="normal_checked" offset = "7 97 18 30"/>
+      <State name="pushed" offset = "7 129 18 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "24 0 6 30" align = "Right VStretch">
+      <State name="disabled" offset = "25 1 6 30"/>
+      <State name="normal" offset = "25 33 6 30"/>
+      <State name="highlighted" offset = "25 65 6 30"/>
+      <State name="normal_checked" offset = "25 97 6 30"/>
+      <State name="pushed" offset = "25 129 6 30"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "4 4 22 22" align = "HStretch VStretch">
+      <State name="disabled" offset = "34 28 22 22"/>
+      <State name="normal" offset = "34 28 22 22"/>
+      <State name="highlighted" offset = "34 28 22 22"/>
+      <State name="normal_checked" offset = "34 28 22 22"/>
+      <State name="pushed" offset = "34 28 22 22"/>
+    </BasisSkin>
+  </Resource>
+  
+  <Resource type="ResourceSkin" name = "ConsoleStaticText" size = "512 232" texture = "Menu_Button.png">
+    <Property key="FontName" value = "font_DejaVuSans.17" />
+    <Property key="TextAlign" value = "Left Bottom" />
+
+    <BasisSkin type="SimpleText" offset = "2 2 512 232" align = "Stretch">
+      <State name="disabled" colour="#FFFFFF" shift = "false"/>
+      <State name="normal" colour="#FFFFFF" shift = "false"/>
+      <State name="highlighted" colour="#FFFFFF" shift = "false"/>
+      <State name="normal_checked" colour="#FFFFFF" shift = "false"/>
+      <State name="pushed" colour="#FFFFFF" shift = "false"/>
+    </BasisSkin>
+
+    <BasisSkin type="SubSkin" offset="0 0 512 232" align="Stretch">
+      <State name="normal" offset="20 105 4 4"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name = "ConsoleEdit" size = "512 24" texture = "Menu_Button.png" >
+    <Child type="Widget" skin="EditClient" offset = "2 1 23 22" align = "Stretch" name = "Client"/>
+
+    <BasisSkin type="SubSkin" offset="0 0 512 24" align="Stretch">
+      <State name="normal" offset="12 105 4 4"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name = "Transparent" size = "4 4" texture = "Menu_Button.png">
+    <BasisSkin type="TileRect" offset = "0 0 4 4" align = "Stretch">
+      <State name="normal" offset = "4 113 4 4">
+        <Property key="TileSize" value = "4 4" />
+        <Property key="TileH" value = "true" />
+        <Property key="TileV" value = "true" />
+      </State>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name="ProgressBarTrack" size="19 12" texture="base_bars.png" >
+    <BasisSkin type="SubSkin" offset = "0 0 19 12" align = "Stretch">
+      <State name="normal" offset = "0 0 19 12"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name="MyProgressBar" size="19 12" texture="base_bars.png" >
+    <Property key="TrackSkin" value = "ProgressBarTrack" />
+    <Property key="TrackWidth" value = "19" />
+    <Property key="TrackStep" value = "19" />
+    <Property key="TrackFill" value = "false" />
+    <Property key="StartPoint" value="Left"/>
+
+    <Child type="Widget" skin="Default" offset = "0 0 19 12" align = "Stretch" name = "Client"/>
+
+    <!-- Background Tiles -->
+    <BasisSkin type="TileRect" offset="0 0 19 12" align="Stretch">
+      <!-- with a tilesize of (12,40) -->
+      <State name="normal" offset="19 0 19 12">
+        <!-- position of the tile in the texture pos: x=30, y=10, width=12, height=40 -->
+        <Property key="TileSize" value="19 12"/>
+        <Property key="TileH" value="true"/>
+        <Property key="TileV" value="false"/>
+      </State>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name="ProgressBarBack" size="512 16" texture="base_healthbar_back.png" >
+    <BasisSkin type="SubSkin" offset = "0 0 512 16" align = "Stretch">
+      <State name="normal" offset = "0 0 512 16"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name="RaceProcess" size="17 492" texture="Hud_race.png">
+    <BasisSkin type="SubSkin" offset = "0 0 17 26" align = "Left Top">
+      <State name="normal" offset = "1 1 17 26"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "0 468 17 24" align = "Left Bottom">
+      <State name="normal" offset = "1 53 17 24"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "0 26 17 442" align = "Left VStretch">
+      <State name="normal" offset = "1 28 17 24"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name="MenuButtonTop" size="236 62" texture="Menu_Button.png">
+    <Property key="FontName" value = "font_DejaVuSans.17" />
+    <Property key="TextAlign" value = "Center" />
+
+    <BasisSkin type="SimpleText" offset = "12 12 210 40" align = "Stretch">
+      <State name="disabled" colour="#FFFFFF" shift = "false"/>
+      <State name="normal" colour="#91d9ff" shift = "false"/>
+      <State name="highlighted" colour="#FFFFFF" shift = "false"/>
+      <State name="normal_checked" colour="#FFFFFF" shift = "false"/>
+      <State name="pushed" colour="#FFFFFF" shift = "false"/>
+    </BasisSkin>
+
+    <BasisSkin type="SubSkin" offset="0 0 236 32" align="Left Top">
+      <State name="normal" offset="1 1 236 32"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset="0 32 236 20" align="Left Top">
+      <State name="normal" offset="1 43 236 20"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset="0 52 236 10" align="Left Top">
+      <State name="normal" offset="1 33 236 10"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name="MenuButtonMiddle" size="236 50" texture="Menu_Button.png">
+    <Property key="FontName" value = "font_DejaVuSans.17" />
+    <Property key="TextAlign" value = "Center" />
+
+    <BasisSkin type="SimpleText" offset = "12 0 210 40" align = "Stretch">
+      <State name="disabled" colour="#FFFFFF" shift = "false"/>
+      <State name="normal" colour="#91d9ff" shift = "false"/>
+      <State name="highlighted" colour="#FFFFFF" shift = "false"/>
+      <State name="normal_checked" colour="#FFFFFF" shift = "false"/>
+      <State name="pushed" colour="#FFFFFF" shift = "false"/>
+    </BasisSkin>
+
+    <BasisSkin type="SubSkin" offset="0 0 236 20" align="Left Top">
+      <State name="normal" offset="1 43 236 20"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset="0 20 236 20" align="Left Top">
+      <State name="normal" offset="1 43 236 20"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset="0 40 236 10" align="Left Top">
+      <State name="normal" offset="1 33 236 10"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name="MenuButtonBottom" size="236 57" texture="Menu_Button.png">
+    <Property key="FontName" value = "font_DejaVuSans.17" />
+    <Property key="TextAlign" value = "Center" />
+
+    <BasisSkin type="SimpleText" offset = "12 0 210 40" align = "Stretch">
+      <State name="disabled" colour="#FFFFFF" shift = "false"/>
+      <State name="normal" colour="#91d9ff" shift = "false"/>
+      <State name="highlighted" colour="#FFFFFF" shift = "false"/>
+      <State name="normal_checked" colour="#FFFFFF" shift = "false"/>
+      <State name="pushed" colour="#FFFFFF" shift = "false"/>
+    </BasisSkin>
+
+    <BasisSkin type="SubSkin" offset="0 0 236 57" align="Left Top">
+      <State name="normal" offset="1 43 236 57"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceSkin" name="WeaponPanel" size="256 96" texture="Hud_weapon.png">
+    <BasisSkin type="SubSkin" offset = "0 0 4 4" align = "Left Top">
+      <State name="normal" offset = "1 1 4 4"/>
+      <State name="broken" offset = "13 1 4 4"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "252 0 4 4" align = "Right Top">
+      <State name="normal" offset = "8 1 4 4"/>
+      <State name="broken" offset = "20 1 4 4"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "4 0 248 1" align = "HStretch Top">
+      <State name="normal" offset = "6 1 1 1"/>
+      <State name="broken" offset = "18 1 1 1"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "4 1 248 3" align = "HStretch Top">
+      <State name="normal" offset = "5 4 3 3"/>
+      <State name="broken" offset = "17 4 3 3"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "1 4 254 91" align = "Stretch">
+      <State name="normal" offset = "5 4 3 3"/>
+      <State name="broken" offset = "17 4 3 3"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "0 4 1 92" align = "Left VStretch">
+      <State name="normal" offset = "1 6 1 1"/>
+      <State name="broken" offset = "13 6 1 1"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "255 4 1 92" align = "Right VStretch">
+      <State name="normal" offset = "11 6 1 1"/>
+      <State name="broken" offset = "23 6 1 1"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "1 95 254 1" align = "HStretch Bottom">
+      <State name="normal" offset = "6 8 1 1"/>
+      <State name="broken" offset = "18 8 1 1"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "1 28 254 1" align = "HStretch Top">
+      <State name="normal" offset = "6 8 1 1"/>
+      <State name="broken" offset = "18 8 1 1"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "1 48 254 1" align = "HStretch Top">
+      <State name="normal" offset = "6 8 1 1"/>
+      <State name="broken" offset = "18 8 1 1"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "172 2 1 24" align = "Right Top">
+      <State name="normal" offset = "11 6 1 1"/>
+      <State name="broken" offset = "23 6 1 1"/>
+    </BasisSkin>
+  </Resource>
+
+
+  <Resource type="ResourceSkin" name="RaceParticipant" size="256 11" texture="Hud_race.png">
+    <Property key="FontName" value = "font_Micro.11" />
+    <Property key="TextAlign" value = "Left VCenter" />
+    <BasisSkin type="SimpleText" offset = "17 0 239 11" align = "Stretch">
+      <State name="friend" colour="#4599FB" shift = "false"/>
+      <State name="foe" colour="#FF0000" shift = "false"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "1 2 15 7" align = "Left Top">
+      <State name="friend" offset = "19 1 15 7"/>
+      <State name="foe" offset = "19 9 15 7"/>
+    </BasisSkin>
+  </Resource>
+
+  <Resource type="ResourceImageSet" name="pic_UspPointerArrow">
+    <Group name="Pointer" texture="usp_pointer.png" size="32 32">
+      <Index name="Pointer" rate="0.15">
+        <Frame point="13 11" count="30"/>
+        <Frame point="13 52"/>
+        <Frame point="56 52"/>
+        <Frame point="91 52"/>
+        <Frame point="56 52"/>
+        <Frame point="13 52"/>
+      </Index>
+    </Group>
+  </Resource>
+
+  <Resource type="ResourceImageSet" name="pic_UspPointerBeam">
+    <Group name="Pointer" texture="usp_pointer.png" size="32 32">
+      <Index name="Pointer" >
+        <Frame point="45 8"/>
+      </Index>
+    </Group>
+  </Resource>
+
+  <Resource type="ResourceImageSet" name="pic_UspPointerSizeLeft">
+    <Group name="Pointer" texture="usp_pointer.png" size="32 32">
+      <Index name="Pointer" >
+        <Frame point="122 48"/>
+      </Index>
+    </Group>
+  </Resource>
+
+  <Resource type="ResourceImageSet" name="pic_UspPointerSizeRight">
+    <Group name="Pointer"  texture="usp_pointer.png" size="32 32">
+      <Index name="Pointer" >
+        <Frame point="160 48"/>
+      </Index>
+    </Group>
+  </Resource>
+
+  <Resource type="ResourceImageSet" name="pic_UspPointerSizeHorz">
+    <Group name="Pointer"  texture="usp_pointer.png" size="32 32">
+      <Index name="Pointer" >
+        <Frame point="123 87"/>
+      </Index>
+    </Group>
+  </Resource>
+
+  <Resource type="ResourceImageSet" name="pic_UspPointerSizeVert">
+    <Group name="Pointer"  texture="usp_pointer.png" size="32 32">
+      <Index name="Pointer" >
+        <Frame point="164 90"/>
+      </Index>
+    </Group>
+  </Resource>
+
+  <Resource type="ResourceImageSet" name="pic_UspPointerHand">
+    <Group name="Pointer" texture="usp_pointer.png" size="32 32">
+      <Index name="Pointer" >
+        <Frame point="154 11"/>
+      </Index>
+    </Group>
+  </Resource>
+
+  <Resource type="ResourceImageSet" name="pic_UspPointerLink">
+    <Group name="Pointer" texture="usp_pointer.png" size="32 32">
+      <Index name="Pointer">
+        <Frame point="91 11"/>
+      </Index>
+    </Group>
+  </Resource>
+</MyGUI>

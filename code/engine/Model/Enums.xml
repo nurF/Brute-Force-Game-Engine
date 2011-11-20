@@ -1,0 +1,166 @@
+<?xml version="1.0" standalone="no" ?>
+<enumgen version = "4">
+
+    <namespace name = "BFG">
+
+        <enum name = "ModelAction" export = "MODEL_API">
+
+            <!-- For MODEL_API definition -->
+            <include>Model/Defs.h</include>
+
+            <value set = "4000">A_FIRST_MODELACTION</value>
+
+            <!-- GameObject Events -->
+            <value>GOE_CONTROL_PITCH</value>
+            <value>GOE_CONTROL_YAW</value>
+            <value>GOE_CONTROL_ROLL</value>
+            <value>GOE_CONTROL_THRUST</value>
+            <value>GOE_CONTROL_MAGIC_STOP</value>
+            <value>GOE_CONTROL_INERTIA</value>
+
+            <value>GOE_VALUE_UPDATED</value>
+
+            <value>GOE_POSITION</value>
+            <value>GOE_ORIENTATION</value>
+            <value>GOE_VELOCITY</value>
+            <value>GOE_SET_WEAPON_TARGET</value>
+            <value>GOE_SET_CAMERA_TARGET</value>
+          
+            <value>GOE_ENGINEOUTPUT</value>
+            <value>GOE_ENERGYLEVEL</value>
+            <value>GOE_ARMOR</value>
+
+            <value>GOE_ROCKET_AMMO</value>
+
+            <value>GOE_REINITIALIZE</value>
+
+            <value>GOE_AUTONAVIGATE</value>
+
+            <value>GOE_POWERUP</value>
+
+            <value>GOE_FIRE_ROCKET</value>
+            <value>GOE_FIRE_LASER</value>
+
+            <value>GOE_TOGGLE_WIREFRAME</value>
+
+            <value>GOE_DETACH_MODULE</value>
+
+            <value>GOE_ENDGOEEVENTS</value>
+
+            <!-- Sector Events -->
+            <value>S_CREATE_GO</value>
+            <value>S_DESTROY_GO</value>
+
+            <!-- Trigger Events -->
+            <value>TE_CHECK_LOCATION</value>
+            <value>TE_FIRED</value>
+            <value>TE_SEQUENCE_COMPLETE</value>
+            <value>TE_RESET</value>
+
+            <value>TE_ENDTRIGGEREVENTS</value>
+
+            <!-- Gui Events -->
+            <value>GUI_SHOW</value>
+            <value>GUI_HIDE</value>
+            <value>GUI_UPDATE</value>
+            <value>GUI_SET_TARGET</value>
+            <value>GUI_SET_CAMERA</value>
+
+            <value>GUI_ENDGUIEVENTS</value>
+        </enum>
+
+        <enum name = "HudElementTypes">
+            <value>HET_ObjectList</value>
+            <value>HET_ObjectView</value>
+            <value>HET_Radar</value>
+            <value>HET_Communication</value>
+            <value>HET_Weapons</value>
+            <value>HET_Crosshair</value>
+            <value>HET_Console</value>
+            <value>HET_Size</value>
+        </enum>
+
+        <enum name = "CameraMode">
+            <value>CM_Fixed</value>
+            <value>CM_Chase</value>
+            <value>CM_ChaseTarget</value>
+            <value>CM_Free</value>
+        </enum>
+
+        <enum name = "ObjectType">
+            <value>OT_Unspecified</value>
+            <value>OT_GameObject</value>
+            <value>OT_Camera</value>
+            <value>OT_Trigger</value>
+            <value>OT_Control</value>
+            <value>OT_Waypoint</value>
+            <value>OT_Sector</value>
+            <value>OT_Module</value>
+        </enum>
+
+        <enum name = "PropertyVar">
+            <!-- PC_AutoNavigator -->
+            <value>PV_TriggerRadius</value>
+
+            <!-- PC_Camera -->
+            <value>PV_CameraMode</value>
+            <value>PV_CameraOffset</value>
+
+            <!-- PC_Destroyable -->
+            <value>PV_Armor</value>
+            <value>PV_Damage</value>
+            <value>PV_Destroyed</value>
+            <value>PV_RespawnCountdown</value>
+            <value>PV_Respawns</value>
+            <value>PV_Effect</value>
+
+            <!-- PC_Physical -->
+            <value>PV_Location</value>
+
+            <value>PV_Velocity</value>
+            <value>PV_RelativeVelocity</value>
+
+            <value>PV_RotationVelocity</value>
+            <value>PV_RelativeRotationVelocity</value>
+
+            <value>PV_Mass</value>
+            <value>PV_Inertia</value>
+
+            <!-- PC_SelfDestruction -->
+            <value>PV_SelfDestructCountdown</value>
+            <value>PV_SelfDestructionActivated</value>
+
+            <!-- PC_ThrustControl -->
+            <value>PV_EngineForce</value>
+            <value>PV_ManeuverForce</value>
+            <value>PV_MaxAngularAcceleration</value>
+            <value>PV_MaxRotationSpeed</value>
+            <value>PV_MaxSpeed</value>
+        </enum>
+
+        <enum name = "GuiElementType">
+            <value>GUI_Target</value>
+            <value>GUI_Armor</value>
+            <value>GUI_Speed</value>
+            <value>GUI_EngineOutput</value>
+            <value>GUI_Radar</value>
+            <value>GUI_SelectFrame</value>
+            <value>GUI_Crosshairs</value>
+            <value>GUI_TargetArrow</value>
+            <value>GUI_TargetSpeed</value>
+            <value>GUI_TargetDistance</value>
+            <value>GUI_TargetArmor</value>
+            <value>GUI_EnergyLevel</value>
+            <value>GUI_Inertia</value>
+            <value>GUI_WeaponSlot1Ammo</value>
+            <value>GUI_Time</value>
+            <value>GUI_Countdown</value>
+            <value>GUI_Timeout</value>
+            <value>GUI_Statistic</value>
+            <value>GUI_RaceProgress</value>
+        </enum>
+
+    </namespace>
+
+</enumgen>
+

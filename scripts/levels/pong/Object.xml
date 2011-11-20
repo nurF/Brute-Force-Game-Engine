@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ObjectConfigs>
+
+  <ObjectConfig name="Pong Ball">
+    <Module
+      name="Root"
+      mesh="cube.mesh"
+      concepts="PongBallConcept"
+      collision="CM_Standard"
+      visible="yes"
+      density="50.0"
+      />
+  </ObjectConfig>
+
+  <ObjectConfig name="Pong Lower Bar">
+    <Module
+      name="Root"
+      mesh="Packer.mesh"
+      concepts="PongLowerBarConcept"
+      collision="CM_Standard"
+      visible="yes"
+      density="10000.0"
+      />
+  </ObjectConfig>
+
+  <ObjectConfig name="Pong Upper Bar">
+    <Module
+      name="Root"
+      mesh="Packer.mesh"
+      concepts="PongUpperBarConcept"
+      collision="CM_Standard"
+      visible="yes"
+      density="10000.0"
+      />
+  </ObjectConfig>
+
+</ObjectConfigs>

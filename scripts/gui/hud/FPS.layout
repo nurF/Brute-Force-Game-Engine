@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyGUI type="Layout">
+  <Widget type="Widget" skin="PanelEmpty" position="0 0 512 512" layer="Debug" align="Left Top" name="FPS">
+
+    <Widget type="Widget" skin="Panel" position="10 302 200 200" align="Left Bottom" name="FPSPanel">
+      <Widget type="StaticText" skin="StaticText" position="8 8 40 24" align="Left Top" name="FPS">
+        <Property key="Widget_Caption" value="FPS:"/>
+      </Widget>
+      <Widget type="StaticText" skin="StaticText" position="8 40 96 24" align="Left Top" name="avFPS">
+        <Property key="Widget_Caption" value="Average FPS:"/>
+      </Widget>
+      <Widget type="StaticText" skin="StaticText" position="8 72 80 24" align="Left Top" name="WorstFPS">
+        <Property key="Widget_Caption" value="Worst FPS:"/>
+      </Widget>
+      <Widget type="StaticText" skin="StaticText" position="8 104 80 24" align="Left Top" name="BestFPS">
+        <Property key="Widget_Caption" value="Best FPS:"/>
+      </Widget>
+      <Widget type="StaticText" skin="StaticText" position="8 136 80 24" align="Right Top" name="TriCount">
+        <Property key="Widget_Caption" value="Tri Count:"/>
+      </Widget>
+      <Widget type="StaticText" skin="StaticText" position="8 168 96 24" align="Left Top" name="BatchCount">
+        <Property key="Widget_Caption" value="Batch Count:"/>
+      </Widget>
+      <Widget type="StaticText" skin="StaticText" position="112 8 80 24" align="Right Top" name="FPSValue"/>
+      <Widget type="StaticText" skin="StaticText" position="112 40 80 24" align="Right Top" name="AvFPSValue"/>
+      <Widget type="StaticText" skin="StaticText" position="112 72 80 24" align="Right Top" name="WorstFPSValue"/>
+      <Widget type="StaticText" skin="StaticText" position="112 104 80 24" align="Right Top" name="BestFPSValue"/>
+      <Widget type="StaticText" skin="StaticText" position="112 136 80 24" align="Right Top" name="TriCountValue"/>
+      <Widget type="StaticText" skin="StaticText" position="112 168 80 24" align="Right Top" name="BatchCountValue"/>
+    </Widget>
+
+  </Widget>
+</MyGUI>

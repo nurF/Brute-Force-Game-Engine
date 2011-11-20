@@ -1,0 +1,209 @@
+<?xml version="1.0" standalone="no" ?>
+
+<controller version = "1">
+
+  <action id = "A_QUIT">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_ESCAPE" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_MOVE_X">
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Absolute">
+      <special axis = "0" sensitivity = "0.05" flip = "0" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_MOVE_Y">
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Absolute">
+      <special axis = "1" sensitivity = "0.05" flip = "0" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_MOVE_Z">
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Absolute">
+      <special axis = "2" sensitivity = "0.05" flip = "0" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_LEFT_PRESSED">
+    <vip type = "VIP_TOGGLE" device = "DT_Mouse">
+      <special hold = "1" button = "MB_Left" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_RIGHT_PRESSED">
+    <vip type = "VIP_TOGGLE" device = "DT_Mouse">
+      <special hold = "1" button = "MB_Right" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_MIDDLE_PRESSED">
+    <vip type = "VIP_TOGGLE" device = "DT_Mouse">
+      <special hold = "1" button = "MB_Middle" />
+    </vip>
+  </action>
+
+  <action id = "A_LOADING_MESH">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_F1" />
+    </vip>
+  </action>
+
+  <action id = "A_LOADING_MATERIAL">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_F2" />
+    </vip>
+  </action>
+
+  <action id = "A_LOADING_SKY">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_F3" />
+    </vip>
+  </action>
+
+  <action id = "A_CAMERA_AXIS_X">
+    <vip type = "VIP_LINEAR_AXIS" axismode = "AM_Relative">
+      <special frequency = "100" raise = "KB_KP8" lower = "KB_KP2" step = "0.5" />
+    </vip>
+  </action>
+
+  <action id = "A_CAMERA_MOUSE_X">
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Relative">
+      <special axis = "1" sensitivity = "0.05" flip = "0" />
+    </vip>
+  </action>
+
+  <action id = "A_CAMERA_AXIS_Y">
+    <vip type = "VIP_LINEAR_AXIS" axismode = "AM_Relative">
+      <special frequency = "100" raise = "KB_KP6" lower = "KB_KP4" step = "0.5" />
+    </vip>
+  </action>
+
+  <action id = "A_CAMERA_MOUSE_Y">
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Relative">
+      <special axis = "0" sensitivity = "0.05" flip = "0" />
+    </vip>
+  </action>
+
+  <action id = "A_CAMERA_AXIS_Z">
+    <vip type = "VIP_LINEAR_AXIS" axismode = "AM_Relative">
+      <special frequency = "100" raise = "KB_KP9" lower = "KB_KP7" step = "0.5" />
+    </vip>
+  </action>
+
+  <action id = "A_CAMERA_MOUSE_Z">
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Relative">
+      <special axis = "0" sensitivity = "0.05" flip = "0" />
+    </vip>
+  </action>
+
+  <action id = "A_CAMERA_MOVE">
+    <vip type = "VIP_LINEAR_AXIS" axismode = "AM_Relative">
+      <special frequency = "100" raise = "KB_KP_MINUS" lower = "KB_KP_PLUS" step = "0.25" />
+    </vip>
+  </action>
+
+  <action id = "A_CAMERA_MOUSE_MOVE">
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Relative">
+      <special axis = "2" sensitivity = "10.0" flip = "1" />
+    </vip>
+  </action>
+
+  <action id = "A_CAMERA_RESET">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_KP_ENTER" />
+    </vip>
+  </action>
+
+  <action id = "A_CAMERA_ORBIT">
+    <vip type = "VIP_TOGGLE">
+      <special button = "KB_KP_MULTIPLY" />
+    </vip>
+  </action>
+
+  <action id = "A_SCREENSHOT">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_F12" />
+    </vip>
+  </action>
+
+  <action id = "A_CREATE_LIGHT">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_F4" />
+    </vip>
+  </action>
+
+  <action id = "A_DESTROY_LIGHT">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_DELETE" />
+    </vip>
+  </action>
+
+  <action id = "A_PREV_LIGHT">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_PAGEUP" />
+    </vip>
+  </action>
+
+  <action id = "A_NEXT_LIGHT">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_PAGEDOWN" />
+    </vip>
+  </action>
+
+  <action id = "A_FIRST_LIGHT">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_HOME" />
+    </vip>
+  </action>
+
+  <action id = "A_LAST_LIGHT">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_END" />
+    </vip>
+  </action>
+
+  <action id = "A_KEY_PRESSED">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_ANY" filter = "BS_Pressed" />
+    </vip>
+  </action>
+
+  <action id = "A_KEY_RELEASED">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_ANY" filter = "BS_Released" />
+    </vip>
+  </action>
+
+  <action id = "A_INFO_WINDOW">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_i" />
+    </vip>
+  </action>
+
+  <action id = "A_SUB_MESH">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_F5" />
+    </vip>
+  </action>
+
+  <action id = "A_TEX_UNIT">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_F6" />
+    </vip>
+  </action>
+
+  <action id = "A_ANIMATION">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_F7" />
+    </vip>
+  </action>
+
+  <action id = "A_ADAPTER">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_F8" />
+    </vip>
+  </action>
+  
+</controller>

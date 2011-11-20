@@ -1,0 +1,86 @@
+<?xml version="1.0" standalone="no" ?>
+<enumgen version = "4">
+
+    <namespace name = "BFG">
+
+        <enum name = "PhysicsAction" export = "PHYSICS_API">
+
+            <!-- For PHYSICS_API definition -->
+            <include>Physics/Defs.h</include>
+
+            <value set = "6000">A_FIRST_PHYSICSACTION</value>
+
+            <!-- ### PhysicsManager ### -->
+            <value>PE_CLEAR</value>
+            <value>PE_STEP</value>
+
+            <value>PE_CREATE_OBJECT</value>
+            <value>PE_DELETE_OBJECT</value>
+
+            <value>PE_ATTACH_MODULE</value>
+            <value>PE_REMOVE_MODULE</value>
+
+            <value>PE_ATTACH_OBJECT</value>
+            <value>PE_DETACH_OBJECT</value>
+
+            <value>PE_CONTACT</value>
+
+            <!-- ### PhysicsObject ### -->
+
+            <value>PE_FULL_SYNC</value>
+            <value>PE_DELTA_SYNC</value>
+
+            <!-- Delta Updates-->
+            <value>PE_VELOCITY</value>
+            <value>PE_ROTATION_VELOCITY</value>
+
+            <value>PE_POSITION</value>
+            <value>PE_ORIENTATION</value>
+
+            <value>PE_MODULE_POSITION</value>
+            <value>PE_MODULE_ORIENTATION</value>
+
+            <value>PE_TOTAL_MASS</value>
+            <value>PE_TOTAL_INERTIA</value>
+
+            <!-- Control Updates-->
+            <value>PE_MODULATE_MASS</value>
+
+            <value>PE_APPLY_FORCE</value>
+            <value>PE_APPLY_TORQUE</value>
+
+            <value>PE_MAGIC_STOP</value>
+            <value>PE_DEBUG</value>
+
+            <value>PE_UPDATE_POSITION</value>
+            <value>PE_UPDATE_ORIENTATION</value>
+
+            <value>PE_UPDATE_MODULE_POSITION</value>
+            <value>PE_UPDATE_MODULE_ORIENTATION</value>
+
+            <!-- Note: One single v3 only (absolute) -->
+            <value>PE_UPDATE_VELOCITY</value>
+            <value>PE_UPDATE_ROTATION_VELOCITY</value>
+
+            <value>PE_UPDATE_COLLISION_MODE</value>
+            <value>PE_UPDATE_SIMULATION_FLAG</value>
+        </enum>
+
+        <enum name = "CollisionMode" export = "PHYSICS_API">
+            <value>CM_Disabled</value>
+            <value>CM_Standard</value>
+            <value>CM_Ghost</value>
+        </enum>
+
+        <enum name = "CollisionGeometry" export = "PHYSICS_API">
+            <value>CG_Sphere</value>
+            <value>CG_Box</value>
+            <value>CG_Plane</value>
+            <value>CG_CappedCylinder</value>
+            <value>CG_TriMesh</value>
+        </enum>
+
+    </namespace>
+
+</enumgen>
+

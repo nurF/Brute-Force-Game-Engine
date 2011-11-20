@@ -1,0 +1,73 @@
+This file describes how to compile the Brute-Force Game Engine.
+
+Windows
+=======
+
+Download one of our dependency packages:
+
+	https://forum.ultimatespaceproject.de/bundles
+
+Then simply put everything from within the package into the engine root
+directory.
+
+If you can't find a package for your environment you'll have to bite the
+bullet: All dependencies must be compiled manually and put into the thirdparty
+directory.
+
+Debian / Ubuntu and derivates
+=============================
+
+Download one of our dependency packages:
+
+	https://forum.ultimatespaceproject.de/bundles
+
+If you can't find a package for your architecture please use our make_deb.sh
+script and try to build the package yourself. The $ARCH variable within the
+script must be manually changed in order to do this. Please notice that this
+script needs root privileges in order to install further dependencies.
+
+How to install it:
+
+	sudo dpkg -i package.deb
+
+now install further dependencies:
+
+	sudo apt-get install -f
+
+At the time of this writing Boost 1.47.0 is quite new and I'm unable to find a
+debian package for it. This is why I included Boost within our dependency
+package which will conflict with older versions of Boost.  
+
+Other Linux distributions
+=========================
+
+Take a look into our make_deb.sh script to see how we gathered all dependencies
+together and do the same as for Ubuntu above.
+
+Compiling
+=========
+
+Simply open up a shell, move to the root directory and create a new empty
+directory for the build process.
+
+At the first time you'll need to create some empty placeholders (so that cmake
+can find and compile them later)
+
+for Linux:
+	
+	./enuminit.sh
+
+for Windows:
+
+	enuminit.bat
+
+Switch to the newly created folder and run cmake like this:
+
+	cmake ..
+
+This way you tell cmake to use the root directory for its run. After CMake has
+completed successfully you can simply run:
+
+	make
+
+Have fun.

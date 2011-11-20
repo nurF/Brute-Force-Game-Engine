@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+  <Widget type="Widget" skin="Transparent" position="0 0 512 512" layer="Foreground" align="Left Top" name="Console">
+    <!-- Static Text -->
+    <Widget type="StaticText" skin="ConsoleStaticText" position="0 0 512 232" name="ConsoleText" align="HStretch VRelative"/>
+
+    <!-- Edit -->
+    <Widget type="Edit" skin="ConsoleEdit" position="0 233 512 24" name="ConsoleEdit" align="HStretch VRelative">
+      <Property key="Edit_MultiLine" value="false"/>
+    </Widget>
+  </Widget>
+</MyGUI>

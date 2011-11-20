@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone="no" ?>
+
+<controller version = "1">
+
+  <action id = "A_CONSOLE">
+    <vip type = "VIP_TOGGLE">
+      <special button = "KB_CARET" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_MOVE_X">
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Absolute">
+      <special axis = "0" sensitivity = "0.05" flip = "0" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_MOVE_Y">
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Absolute">
+      <special axis = "1" sensitivity = "0.05" flip = "0" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_MOVE_Z">
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Absolute">
+      <special axis = "2" sensitivity = "0.05" flip = "0" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_LEFT_PRESSED">
+    <vip type = "VIP_TOGGLE" device = "DT_Mouse">
+      <special hold = "1" button = "MB_Left" />
+    </vip>
+  </action>
+
+  <action id = "A_MOUSE_RIGHT_PRESSED">
+    <vip type = "VIP_TOGGLE">
+      <special hold = "1" button = "MB_Right" />
+    </vip>
+  </action>
+
+  <action id = "A_KEY_PRESSED">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_ANY" filter = "BS_Pressed" />
+    </vip>
+  </action>
+
+  <action id = "A_KEY_RELEASED">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_ANY" filter = "BS_Released" />
+    </vip>
+  </action>
+
+</controller>

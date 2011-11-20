@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ValueConfigs>
+  <ValueConfig name="DefaultCannon">
+    <PV id="ProjectileSpeed" value="20.0" />
+    <PV id="ProjectileSpawnDistance" value="7.5" />
+  </ValueConfig>
+
+  <ValueConfig name="PowerUpDestroyable">
+    <PV id="Destroyed" value="no" />
+    <PV id="Respawns" value="no" />
+    <PV id="Armor" value="1.0" />
+    <PV id="Damage" value="0.0" />
+    <PV id="RespawnCountdown" value="0" />
+    <PV id="Effect" value="Powerup_1" />
+  </ValueConfig>
+
+  <ValueConfig name="PlayerDestroyable">
+    <PV id="Destroyed" value="no" />
+    <PV id="Respawns" value="no" />
+    <PV id="Armor" value="50.0" />
+    <PV id="Damage" value="0.0" />
+    <PV id="RespawnCountdown" value="0" />
+    <PV id="Effect" value="Explosion_1" />
+  </ValueConfig>
+</ValueConfigs>
+

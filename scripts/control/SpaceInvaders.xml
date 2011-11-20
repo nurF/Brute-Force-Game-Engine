@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no" ?>
+
+<controller version = "1">
+
+  <action id = "A_QUIT">
+    <vip type = "VIP_CLICK">
+      <special button = "KB_ESCAPE" />
+    </vip>
+  </action>
+
+  <action id = "A_FPS">
+    <vip type = "VIP_TOGGLE">
+      <special button = "KB_F11" />
+    </vip>
+  </action>
+
+  <action id = "A_SHIP_FIRE">
+    <vip type = "VIP_HOLD" device = "DT_Keyboard" axismode = "AM_Absolute">
+      <special frequency = "5" button = "KB_SPACE" />
+    </vip>
+    <vip type = "VIP_HOLD" device = "DT_Mouse">
+      <special frequency = "5" button = "MB_Left" />
+    </vip>
+    <vip type = "VIP_HOLD" device = "DT_Joystick">
+      <special frequency = "5" button = "JB_Button0" />
+    </vip>
+  </action>
+
+  <action id = "A_SHIP_AXIS_Y">
+    <vip type = "VIP_LINEAR_AXIS" device = "DT_Keyboard" axismode = "AM_Absolute">
+      <special frequency = "100" raise = "KB_a" lower = "KB_d" step = "0.2" swing = "0.25" />
+    </vip>
+    <vip type = "VIP_STEER" device = "DT_Mouse" axismode = "AM_Relative">
+      <special frequency = "100" axis = "0" sensitivity = "0.05" flip = "1" swing = "0.05" />
+    </vip>
+    <vip type = "VIP_STEER" device = "DT_Joystick" axismode = "AM_Absolute">
+      <special axis = "1" sensitivity = "0.01" flip = "1" range = "32767" />
+    </vip>
+  </action>
+
+</controller>

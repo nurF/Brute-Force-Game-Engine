@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ConceptConfigs>
+
+  <ConceptConfig name="PongBallConcept" >
+    <PC id="BallControl" properties="NoProperties" />
+    <PC id="Physical" properties="NoProperties" />
+  </ConceptConfig>
+
+  <ConceptConfig name="PongLowerBarConcept" >
+    <PC id="Physical" properties="NoProperties" />
+    <PC id="BarControl" properties="NoProperties" />
+  </ConceptConfig>
+
+  <ConceptConfig name="PongUpperBarConcept" >
+    <PC id="Physical" properties="NoProperties" />
+    <PC id="BarControl" properties="NoProperties" />
+  </ConceptConfig>
+
+</ConceptConfigs>
+

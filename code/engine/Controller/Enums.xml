@@ -1,0 +1,278 @@
+<?xml version="1.0" standalone="no" ?>
+<enumgen version = "4">
+
+    <namespace name = "BFG">
+
+        <enum name = "ControllerAction">
+
+            <!-- Default Actions -->
+            <value set = "2000">A_FIRST_CONTROLLER_ACTION</value>
+
+            <value>A_MOUSE_MOVE_X</value>
+            <value>A_MOUSE_MOVE_Y</value>
+            <value>A_MOUSE_MOVE_Z</value>
+            <value>A_MOUSE_LEFT_PRESSED</value>
+            <value>A_MOUSE_RIGHT_PRESSED</value>
+            <value>A_KEY_PRESSED</value>
+            <value>A_KEY_RELEASED</value>
+
+            <value>A_LAST_CONTROLLER_ACTION</value>
+
+            <!-- See ControllerEvent.h -->
+            <value set = "2100">CE_FIRST_CONTROLLER_EVENT</value>
+
+            <value>CE_ACTIVATE_STATE</value>
+            <value>CE_DEACTIVATE_STATE</value>
+            <value>CE_ADD_ACTION</value>
+            <value>CE_LOAD_STATE</value>
+
+            <value>CE_LAST_CONTROLLER_EVENT</value>
+        </enum>
+
+        <enum name = "DeviceType">
+            <value>DT_Keyboard</value>
+            <value>DT_Mouse</value>
+            <value>DT_Joystick</value>
+        </enum>
+
+        <enum name = "ButtonState">
+            <value>BS_Pressed</value>
+            <value>BS_Released</value>
+            <value>BS_Both</value>
+        </enum>
+
+        <enum name = "AxisType">
+            <value>AT_Normal</value>
+            <value>AT_Slider</value>
+            <value>AT_Pov</value>
+        </enum>
+
+        <enum name = "AxisMode">
+            <value>AM_Absolute</value>
+            <value>AM_Relative</value>
+        </enum>
+
+        <enum name = "VIPType">
+            <value set = "1">VIP_CLICK</value>
+            <value>VIP_STEER</value>
+            <value>VIP_HOLD</value>
+            <value>VIP_THRUST_AXIS</value>
+            <value>VIP_LINEAR_AXIS</value>
+            <value>VIP_CHEAT</value>
+            <value>VIP_TOGGLE</value>
+        </enum>
+
+        <enum name = "OIS::MouseButtonID" definition-exists = "yes">
+            <include>OIS.h</include>
+
+            <value>OIS::MB_Left</value>
+            <value>OIS::MB_Right</value>
+            <value>OIS::MB_Middle</value>
+            <value>OIS::MB_Button3</value>
+            <value>OIS::MB_Button4</value>
+            <value>OIS::MB_Button5</value>
+            <value>OIS::MB_Button6</value>
+            <value>OIS::MB_Button7</value>
+
+        </enum>
+
+        <!--
+        I copied this from SDL's "SDL_keysym.h" because their keyboard syms
+        "have been cleverly chosen to map to ASCII". We don't need the ASCII
+        part yet (or other special keys which we can't translate atm).
+    -->
+
+        <enum name = "KeyboardButton">
+
+            <value set = "8">KB_BACKSPACE</value>
+            <value set = "9">KB_TAB</value>
+            <value set = "12">KB_CLEAR</value>
+            <value set = "13">KB_RETURN</value>
+            <value set = "19">KB_PAUSE</value>
+            <value set = "27">KB_ESCAPE</value>
+            <value set = "32">KB_SPACE</value>
+            <value set = "33">KB_EXCLAIM</value>
+            <value set = "34">KB_QUOTEDBL</value>
+            <value set = "35">KB_HASH</value>
+            <value set = "36">KB_DOLLAR</value>
+            <value set = "38">KB_AMPERSAND</value>
+            <value set = "39">KB_QUOTE</value>
+            <value set = "40">KB_LEFTPAREN</value>
+            <value set = "41">KB_RIGHTPAREN</value>
+            <value set = "42">KB_ASTERISK</value>
+            <value set = "43">KB_PLUS</value>
+            <value set = "44">KB_COMMA</value>
+            <value set = "45">KB_MINUS</value>
+            <value set = "46">KB_PERIOD</value>
+            <value set = "47">KB_SLASH</value>
+            <value set = "48">KB_0</value>
+            <value set = "49">KB_1</value>
+            <value set = "50">KB_2</value>
+            <value set = "51">KB_3</value>
+            <value set = "52">KB_4</value>
+            <value set = "53">KB_5</value>
+            <value set = "54">KB_6</value>
+            <value set = "55">KB_7</value>
+            <value set = "56">KB_8</value>
+            <value set = "57">KB_9</value>
+            <value set = "58">KB_COLON</value>
+            <value set = "59">KB_SEMICOLON</value>
+            <value set = "60">KB_LESS</value>
+            <value set = "61">KB_EQUALS</value>
+            <value set = "62">KB_GREATER</value>
+            <value set = "63">KB_QUESTION</value>
+            <value set = "64">KB_AT</value>
+            <value set = "65">KB_A</value>
+            <value set = "66">KB_B</value>
+            <value set = "67">KB_C</value>
+            <value set = "68">KB_D</value>
+            <value set = "69">KB_E</value>
+            <value set = "70">KB_F</value>
+            <value set = "71">KB_G</value>
+            <value set = "72">KB_H</value>
+            <value set = "73">KB_I</value>
+            <value set = "74">KB_J</value>
+            <value set = "75">KB_K</value>
+            <value set = "76">KB_L</value>
+            <value set = "77">KB_M</value>
+            <value set = "78">KB_N</value>
+            <value set = "79">KB_O</value>
+            <value set = "80">KB_P</value>
+            <value set = "81">KB_Q</value>
+            <value set = "82">KB_R</value>
+            <value set = "83">KB_S</value>
+            <value set = "84">KB_T</value>
+            <value set = "85">KB_U</value>
+            <value set = "86">KB_V</value>
+            <value set = "87">KB_W</value>
+            <value set = "88">KB_X</value>
+            <value set = "89">KB_Y</value>
+            <value set = "90">KB_Z</value>
+            <value set = "91">KB_LEFTBRACKET</value>
+            <value set = "92">KB_BACKSLASH</value>
+            <value set = "93">KB_RIGHTBRACKET</value>
+            <value set = "94">KB_CARET</value>
+            <value set = "95">KB_UNDERSCORE</value>
+            <value set = "96">KB_BACKQUOTE</value>
+            <value set = "97">KB_a</value>
+            <value set = "98">KB_b</value>
+            <value set = "99">KB_c</value>
+            <value set = "100">KB_d</value>
+            <value set = "101">KB_e</value>
+            <value set = "102">KB_f</value>
+            <value set = "103">KB_g</value>
+            <value set = "104">KB_h</value>
+            <value set = "105">KB_i</value>
+            <value set = "106">KB_j</value>
+            <value set = "107">KB_k</value>
+            <value set = "108">KB_l</value>
+            <value set = "109">KB_m</value>
+            <value set = "110">KB_n</value>
+            <value set = "111">KB_o</value>
+            <value set = "112">KB_p</value>
+            <value set = "113">KB_q</value>
+            <value set = "114">KB_r</value>
+            <value set = "115">KB_s</value>
+            <value set = "116">KB_t</value>
+            <value set = "117">KB_u</value>
+            <value set = "118">KB_v</value>
+            <value set = "119">KB_w</value>
+            <value set = "120">KB_x</value>
+            <value set = "121">KB_y</value>
+            <value set = "122">KB_z</value>
+            <value set = "127">KB_DELETE</value>
+            <!-- End of ASCII mapped keysyms -->
+
+            <!-- Numeric keypad -->
+            <value set = "256">KB_KP0</value>
+            <value set = "257">KB_KP1</value>
+            <value set = "258">KB_KP2</value>
+            <value set = "259">KB_KP3</value>
+            <value set = "260">KB_KP4</value>
+            <value set = "261">KB_KP5</value>
+            <value set = "262">KB_KP6</value>
+            <value set = "263">KB_KP7</value>
+            <value set = "264">KB_KP8</value>
+            <value set = "265">KB_KP9</value>
+            <value set = "266">KB_KP_PERIOD</value>
+            <value set = "267">KB_KP_DIVIDE</value>
+            <value set = "268">KB_KP_MULTIPLY</value>
+            <value set = "269">KB_KP_MINUS</value>
+            <value set = "270">KB_KP_PLUS</value>
+            <value set = "271">KB_KP_ENTER</value>
+            <value set = "272">KB_KP_EQUALS</value>
+
+            <!-- Arrows + Home/End pad -->
+            <value set = "273">KB_UP</value>
+            <value set = "274">KB_DOWN</value>
+            <value set = "275">KB_RIGHT</value>
+            <value set = "276">KB_LEFT</value>
+            <value set = "277">KB_INSERT</value>
+            <value set = "278">KB_HOME</value>
+            <value set = "279">KB_END</value>
+            <value set = "280">KB_PAGEUP</value>
+            <value set = "281">KB_PAGEDOWN</value>
+
+            <!-- Function keys -->
+            <value set = "282">KB_F1</value>
+            <value set = "283">KB_F2</value>
+            <value set = "284">KB_F3</value>
+            <value set = "285">KB_F4</value>
+            <value set = "286">KB_F5</value>
+            <value set = "287">KB_F6</value>
+            <value set = "288">KB_F7</value>
+            <value set = "289">KB_F8</value>
+            <value set = "290">KB_F9</value>
+            <value set = "291">KB_F10</value>
+            <value set = "292">KB_F11</value>
+            <value set = "293">KB_F12</value>
+            <value set = "294">KB_F13</value>
+            <value set = "295">KB_F14</value>
+            <value set = "296">KB_F15</value>
+
+            <!-- Key state modifier keys -->
+            <value set = "300">KB_NUMLOCK</value>
+            <value set = "301">KB_CAPSLOCK</value>
+            <value set = "302">KB_SCROLLOCK</value>
+            <value set = "303">KB_RSHIFT</value>
+            <value set = "304">KB_LSHIFT</value>
+            <value set = "305">KB_RCTRL</value>
+            <value set = "306">KB_LCTRL</value>
+            <value set = "307">KB_RALT</value>
+            <value set = "308">KB_LALT</value>
+            <value set = "309">KB_RMETA</value>
+            <value set = "310">KB_LMETA</value>
+            <value set = "311">KB_LSUPER</value>
+            <value set = "312">KB_RSUPER</value>
+
+            <!-- Controller specific keys -->
+            <value set = "10000">KB_ANY</value>
+            <!-- The famous "any" key. lol -->
+        </enum>
+
+        <!-- This is an "extension". OIS has no joystick button identifiers. -->
+        <enum name = "JoystickButtonID">
+
+            <value>JB_Button0</value>
+            <value>JB_Button1</value>
+            <value>JB_Button2</value>
+            <value>JB_Button3</value>
+            <value>JB_Button4</value>
+            <value>JB_Button5</value>
+            <value>JB_Button6</value>
+            <value>JB_Button7</value>
+            <value>JB_Button8</value>
+            <value>JB_Button9</value>
+            <value>JB_Button10</value>
+            <value>JB_Button11</value>
+            <value>JB_Button12</value>
+            <value>JB_Button13</value>
+            <value>JB_Button14</value>
+            <value>JB_Button15</value>
+
+        </enum>
+
+    </namespace>
+
+</enumgen>
+

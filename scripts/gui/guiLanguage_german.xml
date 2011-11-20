@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MyGUI>
+  <Tag name="guiMessage_NewGame">Neues Spiel</Tag>
+  <Tag name="guiMessage_NewGame2">Neues Spiel 2</Tag>
+  <Tag name="guiMessage_Options">Optionen</Tag>
+  <Tag name="guiMessage_Exit">Beenden</Tag>
+  <Tag name="guiMessage_Gameplay">Spieloptionen</Tag>
+  <Tag name="guiMessage_Grafics">Grafik</Tag>
+  <Tag name="guiMessage_Sound">Sound</Tag>
+  <Tag name="guiMessage_Cancel">Abbrechen</Tag>
+  <Tag name="guiMessage_Ok">Ok</Tag>
+  <Tag name="guiMessage_Save">Speichern</Tag>
+  <Tag name="guiMessage_Speech">Sprache</Tag>
+  <Tag name="guiMessage_FX">Effekte</Tag>
+  <Tag name="guiMessage_Music">Musik</Tag>
+</MyGUI>

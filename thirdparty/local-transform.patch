@@ -1,0 +1,15 @@
+Index: ode/src/collision_trimesh_internal.h
+===================================================================
+--- ode/src/collision_trimesh_internal.h	(revision 1764)
++++ ode/src/collision_trimesh_internal.h	(working copy)
+@@ -411,8 +411,8 @@
+ }
+ 
+ inline void FetchTransformedTriangle(dxTriMesh* TriMesh, int Index, dVector3 Out[3]){
+-	const dVector3& Position = *(const dVector3*)dGeomGetPosition(TriMesh);
+-	const dMatrix3& Rotation = *(const dMatrix3*)dGeomGetRotation(TriMesh);
++	const dVector3& Position = *(const dVector3*)dGeomGetOffsetPosition(TriMesh);
++	const dMatrix3& Rotation = *(const dMatrix3*)dGeomGetOffsetRotation(TriMesh);
+ 	FetchTriangle(TriMesh, Index, Position, Rotation, Out);
+ }
+ 

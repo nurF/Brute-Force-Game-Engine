@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ValueConfigs>
+
+  <ValueConfig name = "NoProperties">
+  </ValueConfig>
+
+  <ValueConfig name="StandardNavigator">
+    <PV id="TriggerRadius" value="5.0" />
+  </ValueConfig>
+
+  <ValueConfig name="ExplodeOnContact">
+    <PV id="Destroyed" value="no" />
+    <PV id="Respawns" value="no" />
+    <PV id="Armor" value="1.0" />
+    <PV id="Damage" value="0.0" />
+    <PV id="RespawnCountdown" value="0" />
+    <PV id="Effect" value="Explosion_2" />
+  </ValueConfig>
+
+  <ValueConfig name="RocketEngine">
+    <PV id="EngineForce" value="100.0" />
+    <PV id="ManeuverForce" value="15.0" />
+    <PV id="MaxRotationSpeed" value="3.141593, 3.141593, 3.141593" />
+    <PV id="MaxSpeed" value="2500.0" />
+  </ValueConfig>
+
+  <ValueConfig name="RocketSelfDestruction">
+    <PV id="PV_SelfDestructCountdown" value="10.0" />
+  </ValueConfig>
+
+</ValueConfigs>
+

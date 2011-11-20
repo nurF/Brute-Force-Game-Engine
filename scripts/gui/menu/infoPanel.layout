@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Transparent" position="0 0 512 512" layer="Background" name="MainInfoPanel">
+        <Widget type="StaticText" skin="StaticText" position="2 494 72 16" align="Left Bottom">
+            <Property key="Widget_Caption" value="Skybox:"/>
+            <Property key="Text_TextColour" value="#FFFFFF"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="2 476 72 16" align="Left Bottom">
+            <Property key="Widget_Caption" value="Light:"/>
+            <Property key="Text_TextColour" value="#FFFFFF"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="2 458 72 16" align="Left Bottom">
+            <Property key="Widget_Caption" value="Mesh:"/>
+            <Property key="Text_TextColour" value="#FFFFFF"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="2 440 72 16" align="Left Bottom">
+            <Property key="Widget_Caption" value="SubEntity:"/>
+            <Property key="Text_TextColour" value="#FFFFFF"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="2 422 72 16" align="Left Bottom">
+            <Property key="Widget_Caption" value="Material:"/>
+            <Property key="Text_TextColour" value="#FFFFFF"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="76 494 96 16" align="Left Bottom" name="infoSky">
+            <Property key="Text_TextColour" value="#FFFFFF"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="76 476 96 16" align="Left Bottom" name="infoLight">
+            <Property key="Text_TextColour" value="#FFFFFF"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="76 458 96 16" align="Left Bottom" name="infoMesh">
+            <Property key="Text_TextColour" value="#FFFFFF"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="76 440 96 16" align="Left Bottom" name="infoSubEntity">
+            <Property key="Text_TextColour" value="#FFFFFF"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="76 422 96 16" align="Left Bottom" name="infoMat">
+            <Property key="Text_TextColour" value="#FFFFFF"/>
+        </Widget>
+    </Widget>
+</MyGUI>

@@ -1,0 +1,25 @@
+Dependencies
+============
+
+Boost      : 1.47.0
+Boost.Log  : r616 (Windows)
+Boost.Log  : r607 (Linux)
+MyGUI      : r4332
+OGRE       : 1.7.3
+OpenAL     : r2921
+ODE        : r1727
+TinyXML    : 2.5.3
+libsndfile : 1.0.24
+OIS        : 1.3.0
+libogg     : 1.2.2
+libvorbis  : 1.3.2
+
+Linux Specific Packages
+-----------------------
+
+libasound2-dev    : 1.0.24 (shared library for ALSA applications)
+uuid-dev          : 2.19.1 (Universally unique id library)
+libbz2-dev        : 1.0.5 (high-quality block-sorting file compressor library)
+libzip-dev        : 0.9.3 (library for reading, creating, and modifying zip archives)
+libfreeimage-dev  : 3.13.1 (Support library for graphics image formats)
+libzzip-dev       : 0.13.56 (library providing read access on ZIP-archives)

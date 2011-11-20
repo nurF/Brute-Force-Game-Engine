@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+  <Widget type="Window" skin="WindowC" position="304 40 632 210" layer="Menu">
+    <Property key="Widget_Caption" value="Adapter"/>
+    <Property key="Window_MinSize" value="632 210"/>
+    <Property key="Window_MaxSize" value="632 210"/>
+    <Widget type="StaticText" skin="StaticText" position="2 6 64 16">
+      <Property key="Widget_Caption" value="Group:"/>
+    </Widget>
+    <Widget type="ComboBox" skin="ComboBox" position="68 2 188 24" name="name">
+      <Property key="Edit_MultiLine" value="false"/>
+      <Property key="Edit_ReadOnly" value="true"/>
+    </Widget>
+    <Widget type="Button" skin="Button" position="2 30 60 24" align="Left Top" name="newAdapter">
+      <Property key="Widget_Caption" value="New"/>
+    </Widget>
+    <Widget type="ComboBox" skin="ComboBox" position="68 30 84 24" name="adapterSelect">
+      <Property key="Edit_MultiLine" value="false"/>
+      <Property key="Edit_ReadOnly" value="true"/>
+    </Widget>
+    <Widget type="Widget" skin="Transparent" position="2 56 494 80">
+      <Widget type="StaticText" skin="StaticText" position="2 5 64 16">
+        <Property key="Widget_Caption" value="Position:"/>
+      </Widget>
+      <Widget type="StaticText" skin="StaticText" position="2 31 96 16">
+        <Property key="Widget_Caption" value="Orientation:"/>
+      </Widget>
+      <Widget type="Edit" skin="Edit" position="100 2 292 24" name="position"/>
+      <Widget type="Edit" skin="Edit" position="100 28 96 24" name="qX">
+        <Property key="Edit_ReadOnly" value="true"/>
+      </Widget>
+      <Widget type="Edit" skin="Edit" position="198 28 96 24" name="qY">
+        <Property key="Edit_ReadOnly" value="true"/>
+      </Widget>
+      <Widget type="Edit" skin="Edit" position="296 28 96 24" name="qZ">
+        <Property key="Edit_ReadOnly" value="true"/>
+      </Widget>
+      <Widget type="Edit" skin="Edit" position="394 28 96 24" name="qW">
+        <Property key="Edit_ReadOnly" value="true"/>
+      </Widget>
+      <Widget type="Button" skin="Button" position="74 2 24 24" name="mousePos">
+        <Property key="Widget_Caption" value="P"/>
+      </Widget>
+      <Widget type="StaticText" skin="StaticText" position="2 57 46 16">
+        <Property key="Widget_Caption" value="Pitch:"/>
+        <Property key="Text_TextColour" value="#FF0000"/>
+      </Widget>
+      <Widget type="Edit" skin="Edit" position="50 54 96 24" name="pitch"/>
+      <Widget type="StaticText" skin="StaticText" position="148 57 36 16">
+        <Property key="Widget_Caption" value="Yaw:"/>
+        <Property key="Text_TextColour" value="#00FF00"/>
+      </Widget>
+      <Widget type="Edit" skin="Edit" position="186 54 96 24" name="yaw"/>
+      <Widget type="StaticText" skin="StaticText" position="284 57 34 16">
+        <Property key="Widget_Caption" value="Roll:"/>
+        <Property key="Text_TextColour" value="#0000FF"/>
+      </Widget>
+      <Widget type="Edit" skin="Edit" position="320 54 96 24" name="roll"/>
+    </Widget>
+    <Widget type="Button" skin="Button" position="556 90 64 24" name="saveAs">
+      <Property key="Widget_Caption" value="Save as"/>
+    </Widget>
+    <Widget type="Button" skin="Button" position="556 62 64 24" name="load">
+      <Property key="Widget_Caption" value="Load"/>
+    </Widget>
+    <Widget type="Button" skin="Button" position="556 118 64 24" name="append">
+      <Property key="Widget_Caption" value="Append"/>
+    </Widget>
+    <Widget type="Button" skin="Button" position="556 146 64 24" name="clear">
+      <Property key="Widget_Caption" value="Clear"/>
+    </Widget>
+    <Widget type="Edit" skin="Edit" position="260 2 116 24" name="newGroupEdit"/>
+    <Widget type="Button" skin="Button" position="380 2 88 24" name="newGroup">
+      <Property key="Widget_Caption" value="new Group"/>
+    </Widget>
+  </Widget>
+</MyGUI>

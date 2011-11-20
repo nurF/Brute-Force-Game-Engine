@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MyGUI type="Layout">
+  <Widget type="Widget" skin="PanelEmpty" position="0 0 512 512" layer="Background" align="Left Top" name="Score">
+
+    <!-- Weapon -->
+    <Widget type="StaticText" skin="StaticText" position="0 0 100 50" align="Left Top" name="UpperScore">
+      <Property key="Text_TextColour" value="#FFFFFF"/>
+      <Property key="Text_TextAlign" value="Left VCenter"/>
+      <Property key="Widget_Caption" value="0"/>
+    </Widget>
+    <Widget type="StaticText" skin="StaticText" position="411 461 100 50" align="Right Bottom" name="LowerScore">
+      <Property key="Text_TextColour" value="#FFFFFF"/>
+      <Property key="Text_TextAlign" value="Right VCenter"/>
+      <Property key="Widget_Caption" value="0"/>
+    </Widget>
+  </Widget>
+</MyGUI>

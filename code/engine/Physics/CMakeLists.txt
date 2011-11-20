@@ -1,0 +1,61 @@
+cmake_minimum_required(VERSION 2.6)
+
+INCLUDE(USE)
+
+USE_INIT_PACKAGE(Physics "0.3.3")
+
+FILE(GLOB Physics_Root *.cpp *.h *.hh)
+
+FILE(GLOB PHYSICS_FILES
+	*.xml
+	${Physics_Root}
+)
+
+SOURCE_GROUP("." FILES ${Physics_Root})
+
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES(${BoostLog_INCLUDE_DIR})
+INCLUDE_DIRECTORIES(${BOOST_GEOMETRY_INCLUDE_DIR})
+INCLUDE_DIRECTORIES(${ODE_INCLUDE_DIR})
+INCLUDE_DIRECTORIES(${OGRE_INCLUDE_DIR})          # Ogre::m3x3 
+INCLUDE_DIRECTORIES(..)
+INCLUDE_DIRECTORIES(.)	# For subdirectories
+
+ADD_DEFINITIONS(-DdSINGLE)
+
+IF(WIN32)
+	ADD_DEFINITIONS(-DPHYSICS_EXPORTS)
+ENDIF(WIN32)
+
+ADD_CUSTOM_TARGET(PhysicsEnums 
+	EnumGen --input ${CMAKE_CURRENT_SOURCE_DIR}/Enums.xml
+	        --header ${CMAKE_CURRENT_SOURCE_DIR}/Enums.hh
+	        --source ${CMAKE_CURRENT_SOURCE_DIR}/Enums.cpp
+	DEPENDS EnumGen
+)
+
+ADD_LIBRARY(Physics SHARED ${PHYSICS_FILES})
+
+TARGET_LINK_LIBRARIES(Physics
+	${Boost_LIBRARIES}
+	${BoostLog_LIBRARIES}
+	ode
+	Base
+	EventCore
+	Core
+	View              # View::loadMesh()
+)
+
+ADD_DEPENDENCIES(Physics PhysicsEnums)
+
+INSTALL(TARGETS Physics
+        LIBRARY DESTINATION ${USE_LIB_DIR}
+        RUNTIME DESTINATION ${USE_LIB_DIR}
+        COMPONENT devel
+)
+		
+INSTALL(FILES ${Physics_Root}
+        DESTINATION ${USE_PACKAGE_INCLUDE_DIR}
+        COMPONENT devel
+)
+		

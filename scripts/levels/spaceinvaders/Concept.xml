@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ConceptConfigs>
+
+  <ConceptConfig name="InvaderConcept" >
+    <PC id="Physical" properties="NoProperties" />
+    <PC id="Destroyable" properties="ExplodeOnContact" />
+    <PC id="InvaderControl" properties="NoProperties" />
+    <PC id="Cannon" properties="DefaultCannon" />
+  </ConceptConfig>
+
+  <ConceptConfig name="ShipConcept" >
+    <PC id="Physical" properties="NoProperties" />
+    <PC id="Destroyable" properties="PlayerDestroyable" />
+    <PC id="ShipControl" properties="NoProperties" />
+    <PC id="Cannon" properties="DefaultCannon" />
+  </ConceptConfig>
+
+  <ConceptConfig name="ProjectileConcept" >
+    <PC id="Physical" properties="NoProperties" />
+    <PC id="Destroyable" properties="ExplodeOnContact" />
+    <PC id="SelfDestruction" properties="RocketSelfDestruction" />
+  </ConceptConfig>
+
+  <ConceptConfig name="AutoProjectileConcept" >
+    <PC id="Physical" properties="NoProperties" />
+    <PC id="Destroyable" properties="ExplodeOnContact" />
+    <PC id="SelfDestruction" properties="RocketSelfDestruction" />
+    <PC id="ThrustControl" properties="RocketEngine" />
+    <PC id="AutoNavigator" properties="StandardNavigator" />
+  </ConceptConfig>
+
+  <ConceptConfig name="PowerupConcept" >
+    <PC id="Physical" properties="NoProperties" />
+    <PC id="Destroyable" properties="PowerUpDestroyable" />
+    <PC id="Collectable" properties="NoProperties" />
+  </ConceptConfig>
+
+</ConceptConfigs>
+

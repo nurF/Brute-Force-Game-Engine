@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no" ?>
+<enumgen version = "4">
+
+    <namespace name = "BFG">
+
+        <enum name = "ClassIDs" export="BFG_CORE_API">
+            <include>Core/Defs.h</include>
+            <value>CID_INVALID</value>
+        </enum>
+
+        <enum name = "PathType" export="BFG_CORE_API">
+            <value>P_LOGS</value>
+            <value>P_GRAPHICS_TEXTURES</value>
+            <value>P_GRAPHICS_MATERIALS</value>
+            <value>P_GRAPHICS_MESHES</value>
+            <value>P_GRAPHICS_SHADER</value>
+            <value>P_SOUND_EFFECTS</value>
+            <value>P_SOUND_MUSIC</value>
+            <value>P_SOUND_VOICE</value>
+            <value>P_SCREENSHOTS</value>
+            <value>P_SCRIPTS</value>
+            <value>P_SCRIPTS_CONTROL</value>
+            <value>P_SCRIPTS_LEVELS</value>
+            <value>P_SCRIPTS_GUI</value>
+            <value>P_SCRIPTS_GUI_HUD</value>
+            <value>P_SCRIPTS_GUI_MENU</value>
+        </enum>
+
+    </namespace>
+
+</enumgen>
+

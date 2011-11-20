@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ObjectConfigs>
+
+  <ObjectConfig name="Invader">
+    <Module
+      name="Root"
+      mesh="Packer.mesh"
+      connection=""
+      adapters="Empty"
+      concepts="InvaderConcept"
+      collision="CM_Standard"
+      visible="yes"
+      density="50.0"
+      />
+  </ObjectConfig>
+
+  <ObjectConfig name="Ship">
+    <Module
+      name="Root"
+      mesh="FastRacer.mesh"
+      connection=""
+      adapters="Empty"
+      concepts="ShipConcept"
+      collision="CM_Standard"
+      visible="yes"
+      density="10000.0"
+      />
+  </ObjectConfig>
+
+  <ObjectConfig name="Projectile">
+    <Module
+      name="Root"
+      mesh="Rocket.mesh"
+      connection=""
+      adapters="Empty"
+      concepts="ProjectileConcept"
+      collision="CM_Standard"
+      visible="yes"
+      density="5.0"
+      />
+  </ObjectConfig>
+
+  <ObjectConfig name="AutoProjectile">
+    <Module
+      name="Root"
+      mesh="Rocket.mesh"
+      connection=""
+      adapters="Empty"
+      concepts="AutoProjectileConcept"
+      collision="CM_Standard"
+      visible="yes"
+      density="5.0"
+      />
+  </ObjectConfig>
+
+  <ObjectConfig name="Powerup">
+    <Module
+      name="Root"
+      mesh="cube.mesh"
+      connection=""
+      adapters="Empty"
+      concepts="PowerupConcept"
+      collision="CM_Ghost"
+      visible="yes"
+      density="5.0"
+      />
+  </ObjectConfig>
+
+</ObjectConfigs>

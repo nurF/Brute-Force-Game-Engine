@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="no" ?>
+<enumgen version = "4">
+
+    <namespace name = "BFG">
+
+        <enum name = "ViewAction" export = "VIEW_API">
+            <!-- For VIEW_API definition -->
+            <include>View/Defs.h</include>
+
+            <value set = "3000">A_FIRST_VIEWACTION</value>
+
+            <!-- State Events -->
+            <value>VE_PAUSE_STATE</value>
+            <value>VE_RESUME_STATE</value>
+
+            <!-- View Events -->
+            <value>VE_SHUTDOWN</value>
+            <value>VE_DEBUG_FPS</value>
+            <value>VE_CONSOLE</value>
+            <value>VE_CONSOLE_COMMAND</value>
+            <value>VE_WEAPON_AMMO</value>
+            <value>VE_UPDATE_POSITION</value>
+            <value>VE_UPDATE_ORIENTATION</value>
+            <value>VE_CREATE_OBJECT</value>
+            <value>VE_DESTROY_OBJECT</value>
+            <value>VE_CREATE_CAMERA</value>
+            <value>VE_CREATE_POINTLIGHT</value>
+            <value>VE_CREATE_DIRECTIONALLIGHT</value>
+            <value>VE_CREATE_SPOTLIGHT</value>
+            <value>VE_SCREENSHOT</value>
+            <value>VE_EFFECT</value>
+            <value>VE_SET_AMBIENT</value>
+            <value>VE_SET_SKY</value>
+            <value>VE_SET_VISIBLE</value>
+            <value>VE_ATTACH_OBJECT</value>
+            <value>VE_DETACH_OBJECT</value>
+            <value>VE_CREATE_PLANE</value>
+            <value>VE_SET_MATERIAL</value>
+
+            <!-- HUD events -->
+            <value>VE_HUD_CREATE_FLIGHTMAP</value>
+            <value>VE_HUD_CREATE_CROSSHAIR</value>
+            <value>VE_HUD_CREATE_WEAPONS</value>
+            <value>VE_HUD_DESTROY_FLIGHTMAP</value>
+            <value>VE_HUD_DESTROY_CROSSHAIR</value>
+            <value>VE_HUD_DESTROY_WEAPONS</value>
+
+            <!-- Menu events -->
+            <value>VE_NEXT_MENU_ENTRY</value>
+            <value>VE_PREV_MENU_ENTRY</value>
+            <value>VE_CONFIRM_MENU_ENTRY</value>
+            <value>VE_LEVEL_CHOSEN</value>
+            <value>VE_EXIT</value>
+          
+
+
+        </enum>
+
+        <enum name = "EffectType" export = "VIEW_API">
+            <!-- For VIEW_API definition -->
+            <include>View/Defs.h</include>
+
+            <value>ET_EXPLOSION</value>
+            <value>ET_EXPLOSION2</value>
+        </enum>
+
+        <enum name = "LightType" export = "VIEW_API">
+            <!-- For VIEW_API definition -->
+            <include>View/Defs.h</include>
+
+            <value set = "0">LT_Point</value>
+            <value set = "1">LT_Directional</value>
+            <value set = "2">LT_Spot</value>
+        </enum>
+
+        <enum name = "HudType" export = "VIEW_API">
+            <!-- For VIEW_API definition -->
+            <include>View/Defs.h</include>
+
+            <value>HT_FLIGHTMAP</value>
+            <value>HT_CROSSHAIR</value>
+            <value>HT_WEAPONS</value>
+        </enum>
+
+    </namespace>
+
+</enumgen>

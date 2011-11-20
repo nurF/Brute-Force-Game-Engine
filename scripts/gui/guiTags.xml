@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MyGUI>
+  <Tag name="MenuSoundFocus">Drone_Search_1.wav</Tag>
+  <Tag name="MenuSoundClick">Drone_Target_1.wav</Tag>
+  <Tag name="MenuSoundExit">Drone_Target_1.wav</Tag>
+  <Tag name="BFE_Menu_Texture">Menu01.png</Tag>
+  <Tag name="BFE_Button_ColourNormal">#000000</Tag>
+  <Tag name="BFE_Button_ColourPushed">#000000</Tag>
+</MyGUI>
