@@ -1407,7 +1407,7 @@ public:
 			std::stringstream passName;
 			passName << "Pass: " << pass->getName() << " (" << pass->getIndex() << ")";
 
-			MyGUI::StaticText* staticText = box->createWidget<MyGUI::StaticText>("StaticText", 2, height, 374, 16, MyGUI::Align::Default);
+			MyGUI::StaticText* staticText = box->createWidget<MyGUI::StaticText>("BFE_StaticText", 2, height, 374, 16, MyGUI::Align::Default);
 			staticText->setCaption(passName.str());
 			staticText->setTextColour(MyGUI::Colour::White);
 
@@ -1424,11 +1424,11 @@ public:
 
 				MyGUI::Widget* panel = box->createWidgetT("Widget", "Transparent", 0, height, 504, 70, MyGUI::Align::Default);
 
-				MyGUI::StaticText* staticText = panel->createWidget<MyGUI::StaticText>("StaticText", 2, 4, 374, 16, MyGUI::Align::Default);
+				MyGUI::StaticText* staticText = panel->createWidget<MyGUI::StaticText>("BFE_StaticText", 2, 4, 374, 16, MyGUI::Align::Default);
 				MyGUI::Button* checkButton = panel->createWidget<MyGUI::Button>("CheckBox", 2, 22, 64, 22, MyGUI::Align::Default, "unitEnabled");
-				MyGUI::Edit* edit = panel->createWidget<MyGUI::Edit>("Edit", 68, 22, 310, 22, MyGUI::Align::Default, "texUnitName");
-				MyGUI::StaticText* staticTextBias = panel->createWidget<MyGUI::StaticText>("StaticText", 2, 46, 64, 22, MyGUI::Align::Default);
-				MyGUI::Edit* editBias = panel->createWidget<MyGUI::Edit>("Edit", 68, 46, 64, 22, MyGUI::Align::Default, "texUnitBias");
+				MyGUI::Edit* edit = panel->createWidget<MyGUI::Edit>("BFE_Edit", 68, 22, 310, 22, MyGUI::Align::Default, "texUnitName");
+				MyGUI::StaticText* staticTextBias = panel->createWidget<MyGUI::StaticText>("BFE_StaticText", 2, 46, 64, 22, MyGUI::Align::Default);
+				MyGUI::Edit* editBias = panel->createWidget<MyGUI::Edit>("BFE_Edit", 68, 46, 64, 22, MyGUI::Align::Default, "texUnitBias");
 
 				checkButton->eventMouseButtonClick = MyGUI::newDelegate(this, &ViewComposerState::onMapEnabled);
 				edit->eventEditSelectAccept = MyGUI::newDelegate(this, &ViewComposerState::onMaterialChanged);
