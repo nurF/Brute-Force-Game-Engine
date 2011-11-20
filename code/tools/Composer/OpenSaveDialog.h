@@ -58,7 +58,12 @@ public:
 
 	const std::string& getFileName() const {return mFileName;}
 
-	void setVisible(bool value) {mWindow->setVisible(value);}
+	void setVisible(bool value)
+	{
+		mWindow->setVisible(value);
+		if (value)
+			update();
+	}
 	bool isVisible() {return mWindow->isVisible();}
 
 	EventHandle_Result eventEndDialog;

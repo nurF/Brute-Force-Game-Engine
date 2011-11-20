@@ -2020,6 +2020,9 @@ public:
 		AdapterMapT::iterator mapIt = mAdapters.begin();
 		for (; mapIt != mAdapters.end(); ++mapIt)
 		{
+			if (mapIt->first == "")
+				continue;
+
 			TiXmlElement* adapters = new TiXmlElement("AdapterConfig");
 			adapters->SetAttribute("name", mapIt->first);
 			adapterConfigs->LinkEndChild(adapters);
@@ -2132,6 +2135,9 @@ public:
 		AdapterMapT::iterator mapIt = mAdapters.begin();
 		for (; mapIt != mAdapters.end(); ++mapIt)
 		{
+			if (mapIt->first == "")
+				continue;
+
 			bool nameFound = false;
 			int lastId = 0;
 
