@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-  <Widget type="Window" skin="WindowC" position="362 32 494 120" layer="Menu">
+  <Widget type="Window" skin="BFE_WindowC" position="362 32 494 120" layer="Menu">
     <Property key="Widget_Caption" value="Preview"/>
     <Property key="Window_MinSize" value="494 120"/>
     <Property key="Window_MaxSize" value="494 120"/>
-    <Widget type="Button" skin="Button" position="2 2 80 24" name="loadMesh">
+    <Widget type="Button" skin="BFE_Button" position="2 2 80 24" name="loadMesh">
       <Property key="Widget_Caption" value="Load Mesh"/>
     </Widget>
-    <Widget type="Button" skin="Button" position="84 2 92 24" name="loadAdapter">
+    <Widget type="Button" skin="BFE_Button" position="84 2 92 24" name="loadAdapter">
       <Property key="Widget_Caption" value="Load Adapter"/>
     </Widget>
-    <Widget type="ComboBox" skin="ComboBox" position="262 2 218 24" name="groupName"/>
-    <Widget type="StaticText" skin="StaticText" position="180 2 80 24">
+    <Widget type="ComboBox" skin="BFE_ComboBox" position="262 2 218 24" name="groupName"/>
+    <Widget type="StaticText" skin="BFE_StaticText" position="180 2 80 24">
       <Property key="Widget_Caption" value="Groupname:"/>
       <Property key="Text_TextAlign" value="Left VCenter"/>
     </Widget>
-    <Widget type="ComboBox" skin="ComboBox" position="122 30 120 24" name="parent"/>
-    <Widget type="StaticText" skin="StaticText" position="2 30 118 24">
+    <Widget type="ComboBox" skin="BFE_ComboBox" position="122 30 120 24" name="parent"/>
+    <Widget type="StaticText" skin="BFE_StaticText" position="2 30 118 24">
       <Property key="Widget_Caption" value="Parent Adapter:"/>
       <Property key="Text_TextAlign" value="Left VCenter"/>
     </Widget>
-    <Widget type="StaticText" skin="StaticText" position="2 58 118 24">
+    <Widget type="StaticText" skin="BFE_StaticText" position="2 58 118 24">
       <Property key="Text_TextAlign" value="Left VCenter"/>
       <Property key="Widget_Caption" value="Child Adapter:"/>
     </Widget>
-    <Widget type="ComboBox" skin="ComboBox" position="122 58 120 24" name="child"/>
-    <Widget type="Button" skin="Button" position="360 30 120 48" name="setPreview">
+    <Widget type="ComboBox" skin="BFE_ComboBox" position="122 58 120 24" name="child"/>
+    <Widget type="Button" skin="BFE_Button" position="360 30 120 48" name="setPreview">
       <Property key="Widget_Caption" value="set Preview"/>
     </Widget>
   </Widget>

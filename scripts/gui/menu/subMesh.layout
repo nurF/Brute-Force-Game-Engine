@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
     <Widget type="Window" skin="WindowCS" position="144 96 368 360" layer="Menu" name="subMeshWindow">
-        <Widget type="List" skin="List" position="0 0 358 324" align="Stretch" name="subMeshList"/>
+        <Widget type="List" skin="BFE_List" position="0 0 358 324" align="Stretch" name="subMeshList"/>
     </Widget>
 </MyGUI>

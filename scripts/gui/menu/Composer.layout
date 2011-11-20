@@ -1,31 +1,36 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-  <Widget type="Widget" skin="Transparent" position="0 0 640 16" layer="Foreground" align="Top Left" name="MainGuiPanel">
-    <Widget type="Button" skin="Button" position="0 0 60 16" align="Left Top" name="Mesh">
+  <Widget type="Widget" skin="Transparent" position="1 0 640 20" layer="Foreground" align="Top Left" name="MainGuiPanel">
+    <Controller type="ControllerEdgeHide">
+      <Property key="RemainPixels" value="1"/>
+      <Property key="ShadowSize" value="1"/>
+      <Property key="Time" value="0.5"/>
+    </Controller>
+    <Widget type="Button" skin="BFE_Button" position="0 0 60 20" align="Left Top" name="Mesh">
       <Property key="Widget_Caption" value="Mesh"/>
     </Widget>
-    <Widget type="Button" skin="Button" position="60 0 60 16" align="Left Top" name="Material">
+    <Widget type="Button" skin="BFE_Button" position="60 0 60 20" align="Left Top" name="Material">
       <Property key="Widget_Caption" value="Material"/>
     </Widget>
-    <Widget type="Button" skin="Button" position="120 0 60 16" align="Left Top" name="Skybox">
+    <Widget type="Button" skin="BFE_Button" position="120 0 60 20" align="Left Top" name="Skybox">
       <Property key="Widget_Caption" value="Skybox"/>
     </Widget>
-    <Widget type="Button" skin="Button" position="180 0 60 16" align="Left Top" name="Light">
+    <Widget type="Button" skin="BFE_Button" position="180 0 60 20" align="Left Top" name="Light">
       <Property key="Widget_Caption" value="Light"/>
     </Widget>
-    <Widget type="Button" skin="Button" position="240 0 80 16" align="Left Top" name="SubEntity">
+    <Widget type="Button" skin="BFE_Button" position="240 0 80 20" align="Left Top" name="SubEntity">
       <Property key="Widget_Caption" value="SubEntity"/>
     </Widget>
-    <Widget type="Button" skin="Button" position="320 0 80 16" align="Left Top" name="TexUnits">
+    <Widget type="Button" skin="BFE_Button" position="320 0 80 20" align="Left Top" name="TexUnits">
       <Property key="Widget_Caption" value="TexUnits"/>
     </Widget>
-    <Widget type="Button" skin="Button" position="400 0 80 16" align="Left Top" name="Animation">
+    <Widget type="Button" skin="BFE_Button" position="400 0 80 20" align="Left Top" name="Animation">
       <Property key="Widget_Caption" value="Animation"/>
     </Widget>
-    <Widget type="Button" skin="Button" position="480 0 80 16" align="Left Top" name="Adapter">
+    <Widget type="Button" skin="BFE_Button" position="480 0 80 20" align="Left Top" name="Adapter">
       <Property key="Widget_Caption" value="Adapter"/>
     </Widget>
-    <Widget type="Button" skin="Button" position="560 0 80 16" align="Left Top" name="Preview">
+    <Widget type="Button" skin="BFE_Button" position="560 0 80 20" align="Left Top" name="Preview">
       <Property key="Widget_Caption" value="Preview"/>
     </Widget>
 

@@ -2,13 +2,13 @@
 <MyGUI type="Layout">
   <Widget type="Widget" skin="Transparent" position="0 0 512 512" layer="Menu" name="MainMenuPanel">
     <Widget type="Widget" skin="Transparent" position="96 96 320 320" align="Center">
-      <Widget type="List" skin="List" position="0 0 320 296" align="Left Top" name="ItemList"/>
+      <Widget type="List" skin="BFE_List" position="0 0 320 296" align="Left Top" name="ItemList"/>
 
-      <Widget type="Button" skin="BFEButton" position="0 296 96 24" align="Left Bottom" name="ListOk">
+      <Widget type="Button" skin="BFE_Button" position="0 296 96 24" align="Left Bottom" name="ListOk">
         <Property key="Widget_Caption" value="#{guiMessage_Ok}"/>
         <UserString key="Select" value="ItemList"/>
       </Widget>
-      <Widget type="Button" skin="BFEButton" position="224 296 96 24" align="Right Bottom" name="ListCancel">
+      <Widget type="Button" skin="BFE_Button" position="224 296 96 24" align="Right Bottom" name="ListCancel">
         <Property key="Widget_Caption" value="#{guiMessage_Cancel}"/>
         <UserString key="Exit" value="true"/>
       </Widget>

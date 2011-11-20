@@ -1,241 +1,241 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
   <Widget type="Widget" skin="Transparent" position="0 0 512 512" layer="Menu" name="MainMenuPanel">
-    <Widget type="Window" skin="WindowC" position="44 6 424 500" align="Center">
+    <Widget type="Window" skin="BFE_WindowC" position="44 6 424 500" align="Center">
       <Property key="Widget_Caption" value="Create Light"/>
       <Widget type="Tab" skin="Tab" position="0 0 416 456">
         <Widget type="TabItem" skin="" position="4 26 407 424">
           <Property key="Widget_Caption" value="Directional"/>
           <Property key="Sheet_Select" value="true"/>
-          <Widget type="StaticText" skin="StaticText" position="0 7 72 17">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 7 72 17">
             <Property key="Widget_Caption" value="Direction:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 7 88 24" name="dDirX">
+          <Widget type="Edit" skin="BFE_Edit" position="88 7 88 24" name="dDirX">
             <Property key="Widget_Caption" value="0.0"/>
             <Property key="Edit_ReadOnly" value="false"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="176 7 80 24" name="dDirY">
+          <Widget type="Edit" skin="BFE_Edit" position="176 7 80 24" name="dDirY">
             <Property key="Widget_Caption" value="0.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="256 7 80 24" name="dDirZ">
+          <Widget type="Edit" skin="BFE_Edit" position="256 7 80 24" name="dDirZ">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="0 39 80 17">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 39 80 17">
             <Property key="Widget_Caption" value="Diffuse:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 39 88 24" name="dDiffR">
+          <Widget type="Edit" skin="BFE_Edit" position="88 39 88 24" name="dDiffR">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="176 39 80 24" name="dDiffG">
+          <Widget type="Edit" skin="BFE_Edit" position="176 39 80 24" name="dDiffG">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="256 39 80 24" name="dDiffB">
+          <Widget type="Edit" skin="BFE_Edit" position="256 39 80 24" name="dDiffB">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="0 71 80 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 71 80 16">
             <Property key="Widget_Caption" value="Specular:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 71 88 24" name="dSpecR">
+          <Widget type="Edit" skin="BFE_Edit" position="88 71 88 24" name="dSpecR">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="176 71 80 24" name="dSpecG">
+          <Widget type="Edit" skin="BFE_Edit" position="176 71 80 24" name="dSpecG">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="256 71 80 24" name="dSpecB">
+          <Widget type="Edit" skin="BFE_Edit" position="256 71 80 24" name="dSpecB">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="0 103 80 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 103 80 16">
             <Property key="Widget_Caption" value="Power:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 103 88 24" name="dPower">
+          <Widget type="Edit" skin="BFE_Edit" position="88 103 88 24" name="dPower">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Button" skin="Button" position="312 400 96 24" name="dCreate">
+          <Widget type="Button" skin="BFE_Button" position="312 400 96 24" name="dCreate">
             <Property key="Widget_Caption" value="Create"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="340 9 64 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="340 9 64 16">
             <Property key="Widget_Caption" value="xyz"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="340 41 64 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="340 41 64 16">
             <Property key="Widget_Caption" value="RGB"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="340 73 64 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="340 73 64 16">
             <Property key="Widget_Caption" value="RGB"/>
           </Widget>
         </Widget>
         <Widget type="TabItem" skin="" position="4 26 407 424">
           <Property key="Widget_Caption" value="Point"/>
-          <Widget type="StaticText" skin="StaticText" position="0 7 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 7 72 16">
             <Property key="Widget_Caption" value="Position:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 7 80 24" name="pPosX"/>
-          <Widget type="Edit" skin="Edit" position="168 7 80 24" name="pPosY"/>
-          <Widget type="Edit" skin="Edit" position="248 7 80 24" name="pPosZ"/>
-          <Widget type="StaticText" skin="StaticText" position="0 39 56 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 7 80 24" name="pPosX"/>
+          <Widget type="Edit" skin="BFE_Edit" position="168 7 80 24" name="pPosY"/>
+          <Widget type="Edit" skin="BFE_Edit" position="248 7 80 24" name="pPosZ"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 39 56 16">
             <Property key="Widget_Caption" value="Range:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 39 80 24" name="pRange"/>
-          <Widget type="StaticText" skin="StaticText" position="0 71 80 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 39 80 24" name="pRange"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 71 80 16">
             <Property key="Widget_Caption" value="Constant:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 71 80 24" name="pConst"/>
-          <Widget type="StaticText" skin="StaticText" position="0 103 56 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 71 80 24" name="pConst"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 103 56 16">
             <Property key="Widget_Caption" value="Linear:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 103 80 24" name="pLinear"/>
-          <Widget type="StaticText" skin="StaticText" position="0 135 64 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 103 80 24" name="pLinear"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 135 64 16">
             <Property key="Widget_Caption" value="Quadric:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 135 80 24" name="pQuad"/>
-          <Widget type="StaticText" skin="StaticText" position="0 167 64 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 135 80 24" name="pQuad"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 167 64 16">
             <Property key="Widget_Caption" value="Diffuse:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 167 80 24" name="pDiffR">
+          <Widget type="Edit" skin="BFE_Edit" position="88 167 80 24" name="pDiffR">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="168 167 80 24" name="pDiffG">
+          <Widget type="Edit" skin="BFE_Edit" position="168 167 80 24" name="pDiffG">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="248 167 80 24" name="pDiffB">
+          <Widget type="Edit" skin="BFE_Edit" position="248 167 80 24" name="pDiffB">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="0 199 80 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 199 80 16">
             <Property key="Widget_Caption" value="Specular:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 199 80 24" name="pSpecR">
+          <Widget type="Edit" skin="BFE_Edit" position="88 199 80 24" name="pSpecR">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="168 199 80 24" name="pSpecG">
+          <Widget type="Edit" skin="BFE_Edit" position="168 199 80 24" name="pSpecG">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="248 199 80 24" name="pSpecB">
+          <Widget type="Edit" skin="BFE_Edit" position="248 199 80 24" name="pSpecB">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="0 231 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 231 72 16">
             <Property key="Widget_Caption" value="Power:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 231 80 24" name="pPower">
+          <Widget type="Edit" skin="BFE_Edit" position="88 231 80 24" name="pPower">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Button" skin="Button" position="312 400 96 24" name="pCreate">
+          <Widget type="Button" skin="BFE_Button" position="312 400 96 24" name="pCreate">
             <Property key="Widget_Caption" value="Create"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="332 9 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="332 9 72 16">
             <Property key="Widget_Caption" value="xyz"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="332 169 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="332 169 72 16">
             <Property key="Widget_Caption" value="RGB"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="332 201 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="332 201 72 16">
             <Property key="Widget_Caption" value="RGB"/>
           </Widget>
         </Widget>
         <Widget type="TabItem" skin="" position="4 26 407 424">
           <Property key="Widget_Caption" value="Spot"/>
-          <Widget type="StaticText" skin="StaticText" position="0 7 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 7 72 16">
             <Property key="Widget_Caption" value="Position:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 7 80 24" name="sPosX"/>
-          <Widget type="Edit" skin="Edit" position="168 7 80 24" name="sPosY"/>
-          <Widget type="Edit" skin="Edit" position="248 7 80 24" name="sPosZ"/>
-          <Widget type="StaticText" skin="StaticText" position="0 39 72 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 7 80 24" name="sPosX"/>
+          <Widget type="Edit" skin="BFE_Edit" position="168 7 80 24" name="sPosY"/>
+          <Widget type="Edit" skin="BFE_Edit" position="248 7 80 24" name="sPosZ"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 39 72 16">
             <Property key="Widget_Caption" value="Direction:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 39 80 24" name="sDirX"/>
-          <Widget type="Edit" skin="Edit" position="168 39 80 24" name="sDirY"/>
-          <Widget type="Edit" skin="Edit" position="248 39 80 24" name="sDirZ"/>
-          <Widget type="StaticText" skin="StaticText" position="0 71 72 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 39 80 24" name="sDirX"/>
+          <Widget type="Edit" skin="BFE_Edit" position="168 39 80 24" name="sDirY"/>
+          <Widget type="Edit" skin="BFE_Edit" position="248 39 80 24" name="sDirZ"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 71 72 16">
             <Property key="Widget_Caption" value="Range:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 71 80 24" name="sRange"/>
-          <Widget type="StaticText" skin="StaticText" position="0 103 72 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 71 80 24" name="sRange"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 103 72 16">
             <Property key="Widget_Caption" value="Constant:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 103 80 24" name="sConst"/>
-          <Widget type="StaticText" skin="StaticText" position="0 135 72 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 103 80 24" name="sConst"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 135 72 16">
             <Property key="Widget_Caption" value="Linear:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 135 80 24" name="sLinear"/>
-          <Widget type="StaticText" skin="StaticText" position="0 167 72 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 135 80 24" name="sLinear"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 167 72 16">
             <Property key="Widget_Caption" value="Quadric:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 167 80 24" name="sQuad"/>
-          <Widget type="StaticText" skin="StaticText" position="0 199 80 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 167 80 24" name="sQuad"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 199 80 16">
             <Property key="Widget_Caption" value="Falloff:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 199 80 24" name="sFalloff"/>
-          <Widget type="StaticText" skin="StaticText" position="0 231 88 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 199 80 24" name="sFalloff"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 231 88 16">
             <Property key="Widget_Caption" value="InnerRadius:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 231 80 24" name="sInner"/>
-          <Widget type="StaticText" skin="StaticText" position="0 263 88 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 231 80 24" name="sInner"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 263 88 16">
             <Property key="Widget_Caption" value="OuterRadius:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 263 80 24" name="sOuter"/>
-          <Widget type="StaticText" skin="StaticText" position="0 295 72 16">
+          <Widget type="Edit" skin="BFE_Edit" position="88 263 80 24" name="sOuter"/>
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 295 72 16">
             <Property key="Widget_Caption" value="Diffuse:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 295 80 24" name="sDiffR">
+          <Widget type="Edit" skin="BFE_Edit" position="88 295 80 24" name="sDiffR">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="168 295 80 24" name="sDiffG">
+          <Widget type="Edit" skin="BFE_Edit" position="168 295 80 24" name="sDiffG">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="248 295 80 24" name="sDiffB">
+          <Widget type="Edit" skin="BFE_Edit" position="248 295 80 24" name="sDiffB">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="0 327 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 327 72 16">
             <Property key="Widget_Caption" value="Specular:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 327 80 24" name="sSpecR">
+          <Widget type="Edit" skin="BFE_Edit" position="88 327 80 24" name="sSpecR">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="168 327 80 24" name="sSpecG">
+          <Widget type="Edit" skin="BFE_Edit" position="168 327 80 24" name="sSpecG">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="248 327 80 24" name="sSpecB">
+          <Widget type="Edit" skin="BFE_Edit" position="248 327 80 24" name="sSpecB">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="0 359 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 359 72 16">
             <Property key="Widget_Caption" value="Power:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 359 80 24" name="sPower">
+          <Widget type="Edit" skin="BFE_Edit" position="88 359 80 24" name="sPower">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Button" skin="Button" position="312 400 96 24" name="sCreate">
+          <Widget type="Button" skin="BFE_Button" position="312 400 96 24" name="sCreate">
             <Property key="Widget_Caption" value="Create"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="332 9 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="332 9 72 16">
             <Property key="Widget_Caption" value="xyz"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="332 41 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="332 41 72 16">
             <Property key="Widget_Caption" value="xyz"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="332 297 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="332 297 72 16">
             <Property key="Widget_Caption" value="RGB"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="332 329 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="332 329 72 16">
             <Property key="Widget_Caption" value="RGB"/>
           </Widget>
         </Widget>
         <Widget type="TabItem" skin="" position="4 26 407 424">
           <Property key="Widget_Caption" value="Ambient"/>
-          <Widget type="StaticText" skin="StaticText" position="0 7 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="0 7 72 16">
             <Property key="Widget_Caption" value="Diffuse:"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="88 7 80 24" name="aDiffR">
+          <Widget type="Edit" skin="BFE_Edit" position="88 7 80 24" name="aDiffR">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="168 7 80 24" name="aDiffG">
+          <Widget type="Edit" skin="BFE_Edit" position="168 7 80 24" name="aDiffG">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="Edit" skin="Edit" position="248 7 80 24" name="aDiffB">
+          <Widget type="Edit" skin="BFE_Edit" position="248 7 80 24" name="aDiffB">
             <Property key="Widget_Caption" value="1.0"/>
           </Widget>
-          <Widget type="StaticText" skin="StaticText" position="332 9 72 16">
+          <Widget type="StaticText" skin="BFE_StaticText" position="332 9 72 16">
             <Property key="Widget_Caption" value="RGB"/>
           </Widget>
-          <Widget type="Button" skin="Button" position="312 400 96 24" name="aSet">
+          <Widget type="Button" skin="BFE_Button" position="312 400 96 24" name="aSet">
             <Property key="Widget_Caption" value="Set"/>
           </Widget>
         </Widget>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Window" skin="WindowCS" position="144 72 512 512" layer="Menu">
+    <Widget type="Window" skin="BFE_WindowC" position="144 72 512 512" layer="Menu">
         <Widget type="ItemBox" skin="ItemBoxV" position="0 0 504 476" align="Stretch" name="itemBox"/>
     </Widget>
 </MyGUI>
