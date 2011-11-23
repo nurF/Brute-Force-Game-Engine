@@ -58,6 +58,12 @@ public:
 
 	const std::string& getFileName() const {return mFileName;}
 
+	void setRestrictions(const std::string& startFolder,
+	                     bool onlyThisFolder,
+	                     const std::string& extension);
+
+	void clearRestrictions();
+
 	void setVisible(bool value)
 	{
 		mWindow->setVisible(value);
@@ -81,13 +87,15 @@ private:
 	void update();
 	void accept();
 
-private:
 	MyGUI::List* mFilesList;
 	MyGUI::Edit* mFileNameEdit;
 	MyGUI::Edit* mCurrentFolderEdit;
 	MyGUI::Button* mOpenSaveButton;
 	MyGUI::Window* mWindow;
 	MyGUI::VectorWidgetPtr mContainer;
+
+	std::string mExtension;
+	bool mOnlyThisFolder;
 
 	std::string mCurrentFolder;
 	std::string mFileName;

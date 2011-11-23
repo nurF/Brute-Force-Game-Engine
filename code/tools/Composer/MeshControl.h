@@ -24,32 +24,53 @@ You should have received a copy of the GNU Lesser General Public License
 along with the BFG-Engine. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef MESHFEATURE
-#define MESHFEATURE
+#ifndef MESHCONTROL
+#define MESHCONTROL
 
 #include <BaseFeature.h>
+
+#include <OgreResourceGroupManager.h>
+
+#include <OpenSaveDialog.h>
 
 namespace Tool
 {
 
-class MeshFeature : public BaseFeature
+class MeshControl : public BaseFeature
 {
 public:
-	MeshFeature(const bool needButton = false) :
-	BaseFeature("MeshFeature", needButton)
+	MeshControl(boost::shared_ptr<SharedData> data, const bool needButton = false) :
+	BaseFeature("Mesh", needButton),
+	mData(data)
 	{
+		BFG::Path p;
+
+		mDialog.setDialogInfo
+		(
+			"Load Mesh",
+			"Load",
+			 MyGUI::newDelegate(this, &MeshControl::onLoadOk)
+		);
+
+		mDialog.setRestrictions
+		(
+			p.Get(ID::P_GRAPHICS_MESHES),
+			true,
+			".mesh"
+		);
 	}
 
-	virtual ~MeshFeature();
+	virtual ~MeshControl()
+	{
+	}
 
 	virtual void load()
 	{
 		if (mLoaded)
 			return;
 
-		mGui.load()
-
 		mLoaded = true;
+		deactivate();
 	}
 
 	virtual void unload()
@@ -60,24 +81,58 @@ public:
 		if (mActive)
 			deactivate();
 		
-		MyGUI::LayoutManager& layMan = MyGUI::LayoutManager::getInstance();
-		layMan.unloadLayout(mContainer);
 		mLoaded = false;
 	}
 
 	virtual void activate()
 	{
+		mDialog.setVisible(true);
 		mActive = true;
 	}
 	virtual void deactivate()
 	{
+		mDialog.setVisible(false);
 		mActive = false;
+	}
+
+	virtual void eventHandler(BFG::Controller_::VipEvent* ve)
+	{
+
 	}
 
 protected:
 
 private:
+	void onLoadOk(MyGUI::Widget* w)
+	{
+		std::string folder = mDialog.getCurrentFolder();
+		std::string meshName = mDialog.getFileName().substr(folder.size() + 1);
 
+		if (!(mData->mActiveMesh))
+		{
+			mData->mActiveMesh = generateHandle();
+		}
+
+		mData->mRenderObject.reset();
+		mData->mRenderObject.reset(new View::RenderObject
+		(
+			NULL_HANDLE,
+			mData->mActiveMesh,
+			meshName,
+			v3::ZERO,
+			qv4::IDENTITY
+		));
+		mData->mMeshName = meshName;
+
+		Ogre::SceneManager* sceneMgr = Ogre::Root::getSingleton().getSceneManager(BFG_SCENEMANAGER);
+		Ogre::Entity* ent = sceneMgr->getEntity(stringify(mData->mActiveMesh));
+
+		deactivate();
+	}
+
+	boost::shared_ptr<SharedData> mData;
+	OpenSaveDialog mDialog;
+	std::string mPath;
 }; // class MeshFeature
 
 } // namespace Tool

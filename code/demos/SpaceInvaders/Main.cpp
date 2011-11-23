@@ -105,6 +105,8 @@ const s32 A_SHIP_FIRE   = 10001;
 const s32 A_QUIT        = 10002;
 const s32 A_FPS         = 10003;
 
+const s32 A_CALL_REINFORCEMENTS = 11000;
+
 class InvaderControl : public Property::Concept
 {
 public:
@@ -208,6 +210,30 @@ public:
 				emit<Physics::Event>(ID::PE_UPDATE_VELOCITY, newVelocity, ownerHandle());
 				break;
 			}
+		}
+	}
+};
+
+class AssistanceControl : public Property::Concept
+{
+public:
+	AssistanceControl(GameObject& Owner, BFG::PluginId pid) :
+	Property::Concept(Owner, "AssistanceControl", pid)
+	{
+		require("ShipControl");
+	}
+	
+	void internalUpdate(quantity<si::time, f32> timeSinceLastFrame)
+	{
+	}
+	
+	void internalOnEvent(EventIdT action,
+	                     Property::Value payload,
+	                     GameHandle module,
+	                     GameHandle sender)
+	{
+		switch(action)
+		{
 		}
 	}
 };
@@ -338,16 +364,29 @@ public:
 		{
 			case ID::PE_CONTACT:
 			{
-				mUsed = true;
-				
-				// Very Cannon specific stuff.
-				s32 ammo = 5;
-				emit<GameObjectEvent>(ID::GOE_POWERUP, ammo, sender);
+				onContact(sender);
 				break;
 			}
 		}
 	}
-	
+
+	void onContact(GameHandle sender)
+	{
+		mUsed = true;
+		
+		s32 probabilityReinforcementsInPercent = 25;
+		if (rand()%100 > probabilityReinforcementsInPercent)
+		{
+			emit<Controller_::VipEvent>(A_CALL_REINFORCEMENTS, 0);
+		}
+		else
+		{
+			// Very Cannon specific stuff.
+			s32 ammo = 5;
+			emit<GameObjectEvent>(ID::GOE_POWERUP, ammo, sender);
+		}
+	}
+
 	bool mUsed;
 };
 	
@@ -365,6 +404,7 @@ public:
 		PROPERTYCONCEPT_BUILD_LIST_BEGIN
 		PROPERTYCONCEPT_CASE(ShipControl)
 		PROPERTYCONCEPT_CASE(InvaderControl)
+		PROPERTYCONCEPT_CASE(AssistanceControl)
 		PROPERTYCONCEPT_CASE(Cannon)
 		PROPERTYCONCEPT_CASE(Collectable)
 		PROPERTYCONCEPT_BUILD_LIST_END
@@ -572,6 +612,7 @@ struct HumanGeneral : Emitter
 	mEnvironment(environment),
 	mLastPowerupSpawned(0 * si::seconds)
 	{
+		loop->connect(A_CALL_REINFORCEMENTS, this, &HumanGeneral::EventHandler);
 	}
 	
 	void update(quantity<si::time, f32> timeSinceLastFrame)
@@ -582,6 +623,37 @@ struct HumanGeneral : Emitter
 		{
 			spawnPowerupAtRandomPosition();
 			mLastPowerupSpawned = 0;
+		}
+	}
+
+	void EventHandler(Controller_::VipEvent* iCE)
+	{
+		switch (iCE->getId())
+		{
+		case A_CALL_REINFORCEMENTS:
+			callReinforcements();
+			break;
+		}
+	}
+
+	void callReinforcements() const
+	{
+		std::vector<GameHandle> targets = mEnvironment->find_all(isInvader);
+		
+		float yPos = -10.0f; 
+		for (size_t i=0; i<20; ++i)
+		{
+			Loader::ObjectParameter op;
+			op.mHandle = generateHandle();
+			op.mName = "Reinforcement";
+			op.mType = "AutoProjectile";
+			op.mLocation = v3(100.0f + yPos, yPos, OBJECT_Z_POSITION - 50.0f); // - 5.0f); // + SPECIAL_PACKER_MESH_OFFSET);
+			fromAngleAxis(op.mLocation.orientation, -90 * DEG2RAD, v3::UNIT_X);
+			emit<SectorEvent>(ID::S_CREATE_GO, op);
+			yPos += 5.0f;
+
+			GameHandle randomInvader = targets[rand()%targets.size()];
+			emit<GameObjectEvent>(ID::GOE_AUTONAVIGATE, randomInvader, op.mHandle);
 		}
 	}
 	

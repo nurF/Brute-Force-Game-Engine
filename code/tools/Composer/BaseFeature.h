@@ -27,6 +27,10 @@ along with the BFG-Engine. If not, see <http://www.gnu.org/licenses/>.
 #ifndef BASEFEATURE
 #define BASEFEATURE
 
+#include <MyGUI.h>
+
+#include <Controller/ControllerEvents.h>
+
 namespace Tool
 {
 
@@ -39,9 +43,8 @@ public:
 	mActive(false),
 	mName(name),
 	mMenuButton(NULL)
-
 	{
-		mGui = MyGUI::Gui::getInstance();
+		mGui = MyGUI::Gui::getInstancePtr();
 
 		if (needButton)
 			createButton();
@@ -60,11 +63,15 @@ public:
 	virtual void deactivate() = 0;
 	virtual bool isActive() {return mActive;}
 
+	virtual void eventHandler(BFG::Controller_::VipEvent* ve) = 0;
+
+	virtual void update(const Ogre::FrameEvent& evt){}
+
 protected:
 
 	void loadLayout(const std::string& filename, MyGUI::VectorWidgetPtr& container);
 
-	MyGUI::Gui& mGui;
+	MyGUI::Gui* mGui;
 	MyGUI::VectorWidgetPtr mContainer;
 
 	bool mActive;
@@ -74,24 +81,35 @@ private:
 
 	void onButtonClicked(MyGUI::Widget*)
 	{
-		if (isActive())
-			return;
-
 		if (!isLoaded())
-			load;
+			load();
 
-		activate();
+		if (isActive())
+			deactivate();
+		else
+			activate();
 	}
 
 	void createButton()
 	{
-		MyGUI::ItemBox* itemBox = mGui.findWidget<MyGUI::ItemBox>("MenuBox");
-		if (!itemBox)
+		MyGUI::Widget* menuBox = mGui->findWidgetT("MenuBox");
+		if (!menuBox)
 			throw std::runtime_error("MenuBox not found!");
 
-		mMenuButton = itemBox.createWidget<MyGUI::Button>
-			("BFE_Button", 0, 0, 64, 24, MyGUI::Align::Default);
+		int xPos = 0;
+		size_t count = menuBox->getChildCount();
+		for (size_t i = 0; i < count; ++i)
+		{
+			MyGUI::Widget* w = menuBox->getChildAt(i);
+			
+			xPos += w->getWidth();
+		}
+		mMenuButton = menuBox->createWidget<MyGUI::Button>
+			("BFE_Button", xPos, 0, 24, 24, MyGUI::Align::Default);
+
 		mMenuButton->setCaption(mName);
+		MyGUI::IntSize textSize = mMenuButton->getSubWidgetText()->getTextSize();
+		mMenuButton->setSize(textSize.width + 4, 24);
 		mMenuButton->eventMouseButtonClick = 
 			MyGUI::newDelegate(this, &BaseFeature::onButtonClicked);
 	}
@@ -101,14 +119,14 @@ private:
 		if (!mMenuButton)
 			return;
 
-		MyGUI::ItemBox* itemBox = mGui.findWidget<MyGUI::ItemBox>("MenuBox");
+		MyGUI::ItemBox* itemBox = mGui->findWidget<MyGUI::ItemBox>("MenuBox");
 		if (!itemBox)
 			return;
 
 		size_t index = itemBox->getIndexByWidget(mMenuButton);
 		itemBox->removeItemAt(index);
 
-		mGui.destroyWidget(mMenuButton);
+		mGui->destroyWidget(mMenuButton);
 		mMenuButton = NULL;
 	}
 

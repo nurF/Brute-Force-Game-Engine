@@ -30,7 +30,8 @@ along with the BFG-Engine. If not, see <http://www.gnu.org/licenses/>.
 #include <Base/CLogger.h>
 #include <Core/Path.h>
 
-OpenSaveDialog::OpenSaveDialog()
+OpenSaveDialog::OpenSaveDialog() :
+mOnlyThisFolder(false)
 {
 	using namespace MyGUI;
 
@@ -86,6 +87,24 @@ void OpenSaveDialog::setDialogInfo(const std::string& caption,
 	mWindow->setCaption(caption);
 	mOpenSaveButton->setCaption(button);
 	mOpenSaveButton->eventMouseButtonClick = clickHandler;
+}
+
+void OpenSaveDialog::setRestrictions(const std::string& startFolder,
+                                     bool onlyThisFolder,
+                                     const std::string& extension)
+{
+	if (startFolder != "")
+		mCurrentFolder = startFolder;
+
+	mOnlyThisFolder = onlyThisFolder;
+	mExtension = extension;
+}
+
+void OpenSaveDialog::clearRestrictions()
+{
+	mCurrentFolder = boost::filesystem::current_path().string();
+	mOnlyThisFolder = false;
+	mExtension = "";
 }
 
 void OpenSaveDialog::notifyEditTextChanged(MyGUI::Edit* sender)
@@ -156,9 +175,12 @@ void OpenSaveDialog::fillInfoVector(FileInfoVectorT& folders,
 			std::string folder = pathEntry.parent_path().string();
 			std::string filename = pathEntry.filename().string();
 
+			if (mExtension != "" && pathEntry.extension() != mExtension)
+				continue;
+
 			files.push_back(FileInfo(filename, folder));
 		}
-		else if(is_directory(pathEntry))
+		else if(is_directory(pathEntry) && !mOnlyThisFolder)
 		{
 			std::string folder = pathEntry.string();
 			std::string filename("");
@@ -184,7 +206,7 @@ void OpenSaveDialog::update()
 
 	path p(mCurrentFolder);
 
-	if(p != p.root_path())
+	if(p != p.root_path() && !mOnlyThisFolder)
 	{
 		FileInfo parent("", p.parent_path().string());
 		mFilesList->addItem("[..]", parent);
