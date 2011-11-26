@@ -24,50 +24,33 @@ You should have received a copy of the GNU Lesser General Public License
 along with the BFG-Engine. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef MESHCONTROL
-#define MESHCONTROL
+#ifndef ADAPTERCONTROL
+#define ADAPTERCONTROL
 
 #include <BaseFeature.h>
 
-#include <OgreResourceGroupManager.h>
-
-#include <OpenSaveDialog.h>
+#include <SharedData.h>
 
 namespace Tool
 {
 
-class MeshControl : public BaseFeature
+class AdapterControl : public BaseFeature
 {
 public:
-	MeshControl(boost::shared_ptr<SharedData> data) :
-	BaseFeature("Mesh", true),
+	AdapterControl(boost::shared_ptr<SharedData> data) :
+	BaseFeature("Adapter", true),
 	mData(data)
 	{
-		BFG::Path p;
 
-		mDialog.setDialogInfo
-		(
-			"Load Mesh",
-			"Load",
-			 MyGUI::newDelegate(this, &MeshControl::onLoadOk)
-		);
-
-		mDialog.setRestrictions
-		(
-			p.Get(ID::P_GRAPHICS_MESHES),
-			true,
-			".mesh"
-		);
-	}
-
-	virtual ~MeshControl()
-	{
 	}
 
 	virtual void load()
 	{
 		if (mLoaded)
 			return;
+
+		MyGUI::LayoutManager* layMan = MyGUI::LayoutManager::getInstancePtr();
+		mContainer = layMan->load("Adapter.layout");
 
 		mLoaded = true;
 		deactivate();
@@ -80,18 +63,26 @@ public:
 
 		if (mActive)
 			deactivate();
-		
+
 		mLoaded = false;
 	}
 
 	virtual void activate()
 	{
-		mDialog.setVisible(true);
+		MyGUI::VectorWidgetPtr::iterator it = mContainer.begin();
+		for (; it != mContainer.end(); ++it)
+		{
+			(*it)->setVisible(true);
+		}
 		mActive = true;
 	}
 	virtual void deactivate()
 	{
-		mDialog.setVisible(false);
+		MyGUI::VectorWidgetPtr::iterator it = mContainer.begin();
+		for (; it != mContainer.end(); ++it)
+		{
+			(*it)->setVisible(false);
+		}
 		mActive = false;
 	}
 
@@ -100,40 +91,10 @@ public:
 
 	}
 
-protected:
-
 private:
-	void onLoadOk(MyGUI::Widget* w)
-	{
-		std::string folder = mDialog.getCurrentFolder();
-		std::string meshName = mDialog.getFileName().substr(folder.size() + 1);
-
-		if (!(mData->mActiveMesh))
-		{
-			mData->mActiveMesh = generateHandle();
-		}
-
-		mData->mRenderObject.reset();
-		mData->mRenderObject.reset(new View::RenderObject
-		(
-			NULL_HANDLE,
-			mData->mActiveMesh,
-			meshName,
-			v3::ZERO,
-			qv4::IDENTITY
-		));
-		mData->mMeshName = meshName;
-
-		Ogre::SceneManager* sceneMgr = Ogre::Root::getSingleton().getSceneManager(BFG_SCENEMANAGER);
-		Ogre::Entity* ent = sceneMgr->getEntity(stringify(mData->mActiveMesh));
-
-		deactivate();
-	}
 
 	boost::shared_ptr<SharedData> mData;
-	OpenSaveDialog mDialog;
-	std::string mPath;
-}; // class MeshControl
+}; // class AdapterControl
 
 } // namespace Tool
 #endif

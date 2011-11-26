@@ -73,12 +73,12 @@ public:
 	virtual void activate()
 	{
 		mActive = true;
-		emit<Tool::Event>(A_UPDATE_FEATURES, 0, mData->mState);
+		emit<Tool::Event>(A_UPDATE_FEATURES, 0);
 	}
 	virtual void deactivate()
 	{
 		mActive = false;
-		emit<Tool::Event>(A_UPDATE_FEATURES, 0, mData->mState);
+		emit<Tool::Event>(A_UPDATE_FEATURES, 0);
 	}
 
 	void createDefaultCamera()

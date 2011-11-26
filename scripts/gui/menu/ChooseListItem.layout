@@ -1,17 +1,4 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-  <Widget type="Widget" skin="Transparent" position="0 0 512 512" layer="Menu" name="MainMenuPanel">
-    <Widget type="Widget" skin="Transparent" position="96 96 320 320" align="Center">
-      <Widget type="List" skin="BFE_List" position="0 0 320 296" align="Left Top" name="ItemList"/>
-
-      <Widget type="Button" skin="BFE_Button" position="0 296 96 24" align="Left Bottom" name="ListOk">
-        <Property key="Widget_Caption" value="#{guiMessage_Ok}"/>
-        <UserString key="Select" value="ItemList"/>
-      </Widget>
-      <Widget type="Button" skin="BFE_Button" position="224 296 96 24" align="Right Bottom" name="ListCancel">
-        <Property key="Widget_Caption" value="#{guiMessage_Cancel}"/>
-        <UserString key="Exit" value="true"/>
-      </Widget>
-    </Widget>
-  </Widget>
+  <Widget type="List" skin="BFE_List" position="0 24 320 296" align="Left Top" layer="Menu" name="ItemList"/>
 </MyGUI>

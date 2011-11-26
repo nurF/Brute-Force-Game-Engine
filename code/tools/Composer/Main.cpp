@@ -52,8 +52,12 @@ along with the BFG-Engine. If not, see <http://www.gnu.org/licenses/>.
 #include <BaseFeature.h>
 #include <Event.h>
 
+#include <AdapterControl.h>
 #include <CameraControl.h>
+#include <MaterialChange.h>
 #include <MeshControl.h>
+#include <SkyBoxSelect.h>
+#include <SubEntitySelect.h>
 
 using namespace BFG;
 using namespace boost::units;
@@ -135,14 +139,29 @@ public:
 		mLoadedFeatures.push_back(feature);
 		feature->activate();
 
-		feature = new Tool::MeshControl(mData, true);
-		mLoadedFeatures.push_back(feature);
+		mLoadedFeatures.push_back(new Tool::MeshControl(mData));
+
+		mLoadedFeatures.push_back(new Tool::MaterialChange(mData));
+
+		mLoadedFeatures.push_back(new Tool::SubEntitySelect(loop, mData));
+
+		mLoadedFeatures.push_back(new Tool::SkyBoxSelect(loop, mData));
+
+		mLoadedFeatures.push_back(new Tool::AdapterControl(mData));
 
 		onUpdateFeatures();
 	}
 
 	~ViewComposerState()
 	{
+		mActiveFeatures.clear();
+
+		FeatureListT::iterator it = mLoadedFeatures.begin();
+		for (; it != mLoadedFeatures.end(); ++it)
+		{
+			(*it)->unload();
+		}
+		mLoadedFeatures.clear();
 	}
 
 	void createGui()
@@ -295,6 +314,7 @@ void* SingleThreadEntryPoint(void *iPointer)
 		actions[A_ADAPTER] = "A_ADAPTER";
 
 		actions[A_MOUSE_MIDDLE_PRESSED] = "A_MOUSE_MIDDLE_PRESSED";
+		actions[A_UPDATE_FEATURES] = "A_UPDATE_FEATURES";
 
 		BFG::Controller_::fillWithDefaultActions(actions);	
 		BFG::Controller_::sendActionsToController(loop, actions);
