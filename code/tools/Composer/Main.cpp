@@ -165,12 +165,20 @@ public:
 			(*it)->unload();
 		}
 		mLoadedFeatures.clear();
+		
+		if (!mContainer.empty())
+		{
+			MyGUI::LayoutManager* layMan = MyGUI::LayoutManager::getInstancePtr();
+			layMan->unloadLayout(mContainer);
+		}
 	}
 
 	void createGui()
 	{
+  		MyGUI::LayoutManager* layMan = MyGUI::LayoutManager::getInstancePtr();
+		mContainer = layMan->load("Composer.layout");
+
 		MyGUI::Gui& gui = MyGUI::Gui::getInstance();
-		gui.load("Composer.layout");
 		MyGUI::Widget* box = gui.findWidgetT("MenuBox");
 		if (!box)
 			throw std::runtime_error("MenuBox not found!");
@@ -267,6 +275,7 @@ private:
 	FeatureListT mActiveFeatures;
 
 	boost::shared_ptr<SharedData> mData;
+	MyGUI::VectorWidgetPtr mContainer;
 };
 
 // This is the Ex-'GameStateManager::SingleThreadEntryPoint(void*)' function

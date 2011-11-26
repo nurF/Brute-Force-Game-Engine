@@ -1,11 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-  <Widget type="Widget" skin="Transparent" position="1 0 510 20" layer="Foreground" align="Left Top" name="MenuBox">
-    <Controller type="ControllerEdgeHide">
-      <Property key="RemainPixels" value="1"/>
-      <Property key="ShadowSize" value="1"/>
-      <Property key="Time" value="0.5"/>
-    </Controller>
-
+  <Widget type="Widget" skin="Transparent" position="0 0 512 20" layer="Foreground" align="Left Top" name="MenuBox">
   </Widget>
 </MyGUI>
