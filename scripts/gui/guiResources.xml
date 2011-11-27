@@ -5,7 +5,7 @@
   <Resource type="ResourceSkin" name = "BFE_StaticText" size = "16 16">
     <Property key="FontName" value = "Default" />
     <Property key="TextAlign" value = "Default" />
-    <Property key="TextColour" value = "#{BFE_Button_ColourNormal}" />
+    <Property key="TextColour" value = "#{BFE_Text_ColourNormal}" />
 
     <BasisSkin type="SimpleText" offset = "0 0 16 16"  align = "Stretch"/>
   </Resource>
@@ -474,6 +474,45 @@
     </BasisSkin>
   </Resource>
 
+  <Resource type="ResourceSkin" name="BFE_Group" size="17 22" texture="#{BFE_Menu_Texture}" >
+    <Property key="FontName" value = "font_Micro.11" />
+    <Property key="TextAlign" value = "Default" />
+    <Property key="TextColour" value = "#{BFE_Button_ColourNormal}" />
+
+    <BasisSkin type="SimpleText" offset = "7 0 10 11"  align = "HStretch Top"/>
+
+    <BasisSkin type="SubSkin" offset = "0 5 7 7" align = "Left Top">
+      <State name="normal" offset = "76 124 7 7"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "0 12 7 3" align = "Left VStretch">
+      <State name="normal" offset = "76 131 7 3"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "0 15 7 7" align = "Left Bottom ">
+      <State name="normal" offset = "76 134 7 7"/>
+    </BasisSkin>
+
+    <BasisSkin type="SubSkin" offset = "7 5 3 7" align = "HStretch Top">
+      <State name="normal" offset = "83 124 3 7"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "7 12 3 3" align = "Stretch">
+      <State name="normal" offset = "83 131 3 3"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "7 15 3 7" align = "HStretch Bottom">
+      <State name="normal" offset = "83 134 3 7"/>
+    </BasisSkin>
+
+    <BasisSkin type="SubSkin" offset = "10 5 7 7" align = "Right Top">
+      <State name="normal" offset = "86 124 7 7"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "10 12 7 3" align = "Right VStretch">
+      <State name="normal" offset = "86 131 7 3"/>
+    </BasisSkin>
+    <BasisSkin type="SubSkin" offset = "10 15 7 7" align = "Right Bottom">
+      <State name="normal" offset = "86 134 7 7"/>
+    </BasisSkin>
+
+  </Resource>
+
   <Resource type="ResourceSkin" name="ProgressBarTrack" size="19 12" texture="base_bars.png" >
     <BasisSkin type="SubSkin" offset = "0 0 19 12" align = "Stretch">
       <State name="normal" offset = "0 0 19 12"/>
@@ -643,6 +682,12 @@
     </BasisSkin>
   </Resource>
 
+  <Resource type="ResourceSkin" name = "BFE_White" size = "1 1" texture = "#{BFE_Menu_Texture}" >
+    <BasisSkin type="MainSkin" offset = "0 0 1 1" align = "Stretch">
+      <State name="normal" offset = "84 120 1 1"/>
+    </BasisSkin>
+  </Resource>
+  
   <Resource type="ResourceImageSet" name="pic_UspPointerArrow">
     <Group name="Pointer" texture="usp_pointer.png" size="32 32">
       <Index name="Pointer" rate="0.15">

@@ -6,4 +6,6 @@
   <Tag name="BFE_Menu_Texture">Menu01.png</Tag>
   <Tag name="BFE_Button_ColourNormal">#000000</Tag>
   <Tag name="BFE_Button_ColourPushed">#000000</Tag>
+  <Tag name="BFE_Text_ColourFocused">#00FF00</Tag>
+  <Tag name="BFE_Text_ColourNormal">#000000</Tag>
 </MyGUI>
