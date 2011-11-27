@@ -14,41 +14,24 @@ LOG_STATUS("USE_PROJECT_BUNDLE: ${USE_PROJECT_BUNDLE}")
 SET(BFG_ENGINE_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/code/engine/")
 
 IF(WIN32)
-# For Visual Studio 2008
-IF(${MSVC_VERSION} EQUAL "1500")
-	MESSAGE("Compiler: Visual Studio 2008")
-	ADD_DEFINITIONS(-D_WIN32_WINNT=0x0501)                 # Target: WinXP
-	ADD_DEFINITIONS(-D_SCL_SECURE_NO_WARNINGS)             # Disable std::copy warnings
-	ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS)             # Disable sprintf warnings
-	ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)                  # Use Boost.Log as shared lib
-	ADD_DEFINITIONS(-DBOOST_ALL_DYN_LINK )                 # Use Boost as shared libs
-	#ADD_DEFINITIONS(-DBOOST_LIB_DIAGNOSTIC)
+	# For Visual Studio 2008 or 2010
+	IF(${MSVC_VERSION} EQUAL "1500" OR ${MSVC_VERSION} EQUAL "1600")
+		ADD_DEFINITIONS(-D_WIN32_WINNT=0x0501)                 # Target: WinXP
+		ADD_DEFINITIONS(-D_SCL_SECURE_NO_WARNINGS)             # Disable std::copy warnings
+		ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS)             # Disable sprintf warnings
+		ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)                  # Use Boost.Log as shared lib
+		ADD_DEFINITIONS(-DBOOST_ALL_DYN_LINK )                 # Use Boost as shared libs
+		#ADD_DEFINITIONS(-DBOOST_LIB_DIAGNOSTIC)
 
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4251;4275") # Disable some DLL warnings
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")          # Enable MultiProcess compiling
+		SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4251;4275") # Disable some DLL warnings
+		SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")          # Enable MultiProcess compiling
 
-	# Temporary solution for starting and debugging applications within Visual Studio.
-	# A better way would be to use the install targets and to split engine and user builds.
-	SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin CACHE PATH "Library output path")
-	SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin CACHE PATH "Executable output path")
-# For Visual Studio 2010
-ELSEIF(${MSVC_VERSION} EQUAL "1600")
-	MESSAGE("Compiler: Visual Studio 2010")
-	ADD_DEFINITIONS(-D_WIN32_WINNT=0x0501)                 # Target: WinXP
-	ADD_DEFINITIONS(-D_SCL_SECURE_NO_WARNINGS)             # Disable std::copy warnings
-	ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS)             # Disable sprintf warnings
-	ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)                  # Use Boost.Log as shared lib
-	ADD_DEFINITIONS(-DBOOST_ALL_DYN_LINK )                 # Use Boost as shared libs
-	#ADD_DEFINITIONS(-DBOOST_LIB_DIAGNOSTIC)
-
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4251;4275") # Disable some DLL warnings
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")          # Enable MultiProcess compiling
-
-	# Temporary solution for starting and debugging applications within Visual Studio.
-	# A better way would be to use the install targets and to split engine and user builds.
-	SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin CACHE PATH "Library output path")
-	SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin CACHE PATH "Executable output path")
-ENDIF(${MSVC_VERSION} EQUAL "1500")
+		# Temporary solution for starting and debugging applications within Visual Studio.
+		# A better way would be to use the install targets and to split engine and user builds.
+		SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin CACHE PATH "Library output path")
+		SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin CACHE PATH "Executable output path")
+		SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin CACHE PATH "Executable output path")
+	ENDIF(${MSVC_VERSION} EQUAL "1500" OR ${MSVC_VERSION} EQUAL "1600")
 ENDIF(WIN32)
 
 #DUMP_LOG_MESSAGE_TYPES()
