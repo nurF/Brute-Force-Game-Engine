@@ -2,8 +2,12 @@
 # you should cmake that one to build BFG - Engine
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 CMAKE_POLICY(SET CMP0011 NEW)
+
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/share/cmake/Modules)
+
 INCLUDE(USE)
+INCLUDE(WinBundle)
+
 LOG_STATUS("Using module path: ${CMAKE_MODULE_PATH}")
 # ---------------------------------
 USE_INIT_PROJECT("Brute-Force Game Engine")
@@ -38,52 +42,9 @@ ENDIF(WIN32)
 
 IF(USE_PROJECT_BUNDLE)
 
-# --------------------------------------------
-# Set path that boost is found
-  SET(BOOST_ROOT "thirdparty/boost_1_47_0")
-  SET(Boost_USE_MULTITHREADED TRUE)
-  SET(Boost_USE_STATIC_LIBS   FALSE)
+	# Nifty Macro. See WinDeps.cmake
+	SETUP_BUNDLE_PATHS()
 
-# --------------------------------------------
-# Handle finding BoostLog
-  SET(BoostLog_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/thirdparty/boost-log")
-  SET(BoostLog_LIBRARY_DIR "${PROJECT_SOURCE_DIR}/thirdparty/boost-log/lib")
-  IF(CMAKE_CONFIGURATION_TYPES)
-	IF(${MSVC_VERSION} EQUAL "1500")
-		SET(BoostLog_LIBRARIES debug ${BoostLog_LIBRARY_DIR}/boost_log_setup-vc90-mt-gd-1_47.lib
-							   debug ${BoostLog_LIBRARY_DIR}/boost_log-vc90-mt-gd-1_47.lib
-							   optimized ${BoostLog_LIBRARY_DIR}/boost_log_setup-vc90-mt-1_47.lib
-							   optimized ${BoostLog_LIBRARY_DIR}/boost_log-vc90-mt-1_47.lib)
-	ELSEIF(${MSVC_VERSION} EQUAL "1600")
-		SET(BoostLog_LIBRARIES debug ${BoostLog_LIBRARY_DIR}/boost_log_setup-vc100-mt-gd-1_47.lib
-							   debug ${BoostLog_LIBRARY_DIR}/boost_log-vc100-mt-gd-1_47.lib
-							   optimized ${BoostLog_LIBRARY_DIR}/boost_log_setup-vc100-mt-1_47.lib
-							   optimized ${BoostLog_LIBRARY_DIR}/boost_log-vc100-mt-1_47.lib)
-	ENDIF(${MSVC_VERSION} EQUAL "1500")
-  ELSE(CMAKE_CONFIGURATION_TYPES)
-	  IF(CMAKE_BUILD_TYPE STREQUAL "Debug")
-		IF(${MSVC_VERSION} EQUAL "1500")
-			SET(BoostLog_LIBRARIES ${BoostLog_LIBRARY_DIR}/boost_log_setup-vc90-mt-gd-1_47.lib
-								   ${BoostLog_LIBRARY_DIR}/boost_log-vc90-mt-gd-1_47.lib)
-		ELSEIF(${MSVC_VERSION} EQUAL "1600")
-			SET(BoostLog_LIBRARIES ${BoostLog_LIBRARY_DIR}/boost_log_setup-vc100-mt-gd-1_47.lib
-									${BoostLog_LIBRARY_DIR}/boost_log-vc100-mt-gd-1_47.lib)
-		ENDIF(${MSVC_VERSION} EQUAL "1500")
-	  ELSE(CMAKE_BUILD_TYPE STREQUAL "Debug")
-		IF(${MSVC_VERSION} EQUAL "1500")
-		SET(BoostLog_LIBRARIES ${BoostLog_LIBRARY_DIR}/boost_log_setup-vc90-mt-1_47.lib
-		                       ${BoostLog_LIBRARY_DIR}/boost_log-vc90-mt-1_47.lib)
-		ELSEIF(${MSVC_VERSION} EQUAL "1600")
-			SET(BoostLog_LIBRARIES ${BoostLog_LIBRARY_DIR}/boost_log_setup-vc100-mt-1_47.lib
-		                       ${BoostLog_LIBRARY_DIR}/boost_log-vc100-mt-1_47.lib)
-		ENDIF(${MSVC_VERSION} EQUAL "1500")
-	  ENDIF(CMAKE_BUILD_TYPE STREQUAL "Debug")		
-  ENDIF(CMAKE_CONFIGURATION_TYPES)
-# --------------------------------------------
-# Handle finding OpenAL
-  SET(OPENAL_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/thirdparty/OpenAL/include)
-  SET(OPENAL_LIBRARY_DIR ${PROJECT_SOURCE_DIR}/thirdparty/OpenAL/libs/Win32)
-  SET(OPENAL_LIBRARY ${OPENAL_LIBRARY_DIR}/OpenAL32.lib)
 ENDIF(USE_PROJECT_BUNDLE)
 
 FIND_PACKAGE(Boost 1.47 REQUIRED date_time thread filesystem program_options system regex)
