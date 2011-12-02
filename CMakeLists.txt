@@ -1,21 +1,23 @@
+# -----------------------------------------------
 # This is the root CMakeLists.txt
 # you should cmake that one to build BFG - Engine
+# --------------------------- preamble ----------
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
-CMAKE_POLICY(SET CMP0011 NEW)
+CMAKE_POLICY(SET CMP0011 NEW) # :TODO: verify need of this policy
 
+# Our helper scripts are located in this folder
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/share/cmake/Modules)
 
+# --------------------------- includes ----------
 INCLUDE(USE)
-INCLUDE(WinBundle)
+INCLUDE(DependencyBundle)
 
-LOG_STATUS("Using module path: ${CMAKE_MODULE_PATH}")
-# ---------------------------------
+# --------------------------- project declaration
 USE_INIT_PROJECT("Brute-Force Game Engine")
-#SET(CMAKE_BUILD_TYPE Release)
 
-LOG_STATUS("USE_PROJECT_BUNDLE: ${USE_PROJECT_BUNDLE}")
-
-SET(BFG_ENGINE_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/code/engine/")
+IF(NOT BFG_ENGINE_INCLUDE_DIR)
+  SET(BFG_ENGINE_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/code/engine/")
+ENDIF(NOT BFG_ENGINE_INCLUDE_DIR)
 
 IF(WIN32)
 	# For Visual Studio 2008 or 2010
@@ -42,6 +44,7 @@ ENDIF(WIN32)
 
 IF(USE_PROJECT_BUNDLE)
 
+	LOG_STATUS("USE_PROJECT_BUNDLE: ${USE_PROJECT_BUNDLE}")
 	# Nifty Macro. See WinDeps.cmake
 	SETUP_BUNDLE_PATHS()
 
@@ -49,14 +52,13 @@ ENDIF(USE_PROJECT_BUNDLE)
 
 FIND_PACKAGE(Boost 1.47 REQUIRED date_time thread filesystem program_options system regex)
 IF(Boost_FOUND)
-  #LOG ("Found boost ${Boost_VERSION} in ${Boost_LIBRARY_DIRS} and ${Boost_INCLUDE_DIR}" )
-  MESSAGE("Boost_LIBRARIES ${Boost_LIBRARIES}")
+  LOG("Found boost ${Boost_VERSION} in ${Boost_LIBRARY_DIRS} and ${Boost_INCLUDE_DIR}" )
 ELSE(Boost_FOUND)
-  MESSAGE(FATAL_ERROR "You need boost in order to build this project")
+  LOG_FATAL("You need boost in order to build this project")
 ENDIF(Boost_FOUND)
 # custom module to find Boost.Log... made by FelixB :)
 FIND_PACKAGE(BoostLog REQUIRED)
-LOG("Boost Log Libraries are: ${BoostLog_LIBRARIES} ${BoostLog_LIBRARY_DIR}")
+#LOG("Boost Log Libraries are: ${BoostLog_LIBRARIES} ${BoostLog_LIBRARY_DIR}")
 FIND_PACKAGE(OpenAL REQUIRED)
 
 #FIND_PACKAGE(LibSndFile REQUIRED)
@@ -67,9 +69,9 @@ IF(WIN32)
 ELSEIF(UNIX)
   FIND_PACKAGE(LibSndFile REQUIRED)
 ELSEIF (APPLE)
-	MESSAGE(FATAL_ERROR "Apple support is not implemented yet")
+	LOG_FATAL("Apple support is not implemented yet")
 ELSE (WIN32)
-	MESSAGE(FATAL_ERROR "Unknown error or a not supported OS")
+	LOG_FATAL("Unknown error or a not supported OS")
 ENDIF(WIN32)
 
 #FIND_PACKAGE(PostgreSQL)
@@ -159,11 +161,13 @@ ENDIF(NOT OIS_FOUND)
 IF(WIN32)
   SET(MYGUI_PATH "MyGUI3.0")
   SET(MYGUI_LIB_PATH "${MYGUI_PATH}/lib")
+  # General MyGUI
   SET(MYGUI_RELEASE_LIB "${MYGUI_LIB_PATH}/Release/MyGUIEngine.lib")
-  SET(MYGUI_OGRE_RELEASE_LIB "${MYGUI_LIB_PATH}/Release/MyGUI.OgrePlatform.lib")
   SET(MYGUI_DEBUG_LIB "${MYGUI_LIB_PATH}/Debug/MyGUIEngine_d.lib")
-  SET(MYGUI_OGRE_DEBUG_LIB "${MYGUI_LIB_PATH}/Debug/MyGUI.OgrePlatform_d.lib")
   SET(MYGUI_INCLUDE_FILE "${MYGUI_PATH}/MyGUIEngine/include/MyGUI.h")
+  # Settings for MyGUI OGRE connection
+  SET(MYGUI_OGRE_RELEASE_LIB "${MYGUI_LIB_PATH}/Release/MyGUI.OgrePlatform.lib")
+  SET(MYGUI_OGRE_DEBUG_LIB "${MYGUI_LIB_PATH}/Debug/MyGUI.OgrePlatform_d.lib")
   SET(MYGUI_OGRE_INCLUDE_FILE "${MYGUI_PATH}/Platforms/Ogre/OgrePlatform/include/MyGUI_OgrePlatform.h")
   IF(CMAKE_CONFIGURATION_TYPES)
 	CHECK_PACKAGE(MYGUI_DEBUG ${MYGUI_DEBUG_LIB} ${MYGUI_INCLUDE_FILE})

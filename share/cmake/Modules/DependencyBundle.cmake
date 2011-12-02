@@ -1,7 +1,15 @@
 
 MACRO(SETUP_BUNDLE_PATHS)
 
-	SET(BFG_THIRDPARTY_DIR "${PROJECT_SOURCE_DIR}/thirdparty")
+	IF(NOT BFG_THIRDPARTY_DIR)
+		SET(BFG_THIRDPARTY_DIR "${PROJECT_SOURCE_DIR}/thirdparty")
+	ELSE(NOT BFG_THIRDPARTY_DIR)
+		LOG_ACTION("Using external dependency folder: ${BFG_THIRDPARTY_DIR}")
+	ENDIF(NOT BFG_THIRDPARTY_DIR)
+	
+	# Use for search (dirs)
+    LIST(APPEND USE_SEARCH_INCDIRS ${BFG_THIRDPARTY_DIR})
+	LIST(APPEND USE_SEARCH_LIBDIRS ${BFG_THIRDPARTY_DIR})
 
 	# ----- #
 	# Boost #
@@ -25,7 +33,7 @@ MACRO(SETUP_BUNDLE_PATHS)
 		SET(BJAM_MS_INTERFIX "vc100")
 	ELSE  (${MSVC_VERSION} EQUAL "1500")
 		SET(BJAM_MS_INTERFIX "" STRING)
-		MESSAGE(WARNING
+		LOG_WARNING(
 			"Unknown Microsoft compiler detected, so you'll have"
 			" to set the correct interfix (e.g. \"vs110\") manually."
 		)
