@@ -1,4 +1,8 @@
+# --------------------------- preamble ----------
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+ENABLE_TESTING()
+
 ADD_SUBDIRECTORY(demos)
 ADD_SUBDIRECTORY(engine)
-#ADD_SUBDIRECTORY(tests)
+ADD_SUBDIRECTORY(tests)
 ADD_SUBDIRECTORY(tools)

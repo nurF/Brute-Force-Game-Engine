@@ -170,9 +170,10 @@ int main( int /*argc*/, const char* /*argv[]*/ )
 		{
 			for ( size_t j = 0; j < 10; ++j )
 			{
-				BaseEventPool * cPool;
+				BaseEventPool * cPool = new BaseEventPool();
 
-				cPool = (BaseEventPool*)iPool->clone();
+				//cPool = (BaseEventPool*)iPool->clone();
+				iPool->copyTo(cPool);
 				cPool->clear();
 				delete cPool;
 			}
